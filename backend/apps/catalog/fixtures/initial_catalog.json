@@ -1,0 +1,3343 @@
+[
+  {
+    "id": "men-001",
+    "name": "Atelier Structured Linen Shirt",
+    "subtitle": "Pure French flax linen with band collar",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 3450,
+    "originalPrice": 4200,
+    "rating": 4.8,
+    "reviewCount": 32,
+    "badge": "Bestseller",
+    "images": [
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Cut from breathable French flax linen with an architectural band collar. garment-washed for a relaxed, lived-in handfeel that drapes effortlessly in warm climates.",
+    "details": [
+      "100% Normandy flax linen",
+      "Mother-of-pearl buttons",
+      "Chest patch pocket with reinforced stitching",
+      "Pre-washed to resist shrinkage"
+    ],
+    "materials": "100% Flax Linen",
+    "inStock": true,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      },
+      {
+        "name": "Muted Olive",
+        "hex": "#777B63"
+      },
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      }
+    ],
+    "tags": [
+      "linen",
+      "shirt",
+      "men",
+      "summer",
+      "breathable"
+    ],
+    "collections": [
+      "bestsellers",
+      "everyday-essentials"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "men-002",
+    "name": "Supima Heavyweight Tee",
+    "subtitle": "260 GSM combed California Supima cotton",
+    "category": "T-shirts and Tops",
+    "gender": "men",
+    "price": 890,
+    "originalPrice": 1200,
+    "rating": 4.9,
+    "reviewCount": 88,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "The archetype of the daily crewneck. Knitted from ultra-dense 260 GSM Supima cotton that holds its crisp silhouette through countless washes without curling at the collar.",
+    "details": [
+      "100% Long-Staple California Supima Cotton",
+      "Dense ribbed crew collar with interior tape",
+      "Blind-stitched sleeves and hemline"
+    ],
+    "materials": "100% Supima Cotton",
+    "inStock": true,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "colors": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      },
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Olive Green",
+        "hex": "#777B63"
+      }
+    ],
+    "tags": [
+      "t-shirt",
+      "basics",
+      "men",
+      "under-999",
+      "cotton"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "men-003",
+    "name": "Pleated Belgian Wool Trousers",
+    "subtitle": "Relaxed taper with deep double front pleats",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 4800,
+    "originalPrice": 5600,
+    "rating": 4.9,
+    "reviewCount": 24,
+    "badge": "Curated Pick",
+    "images": [
+      "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Impeccably tailored trousers woven from high-twist tropical wool. Features deep double forward pleats, side waist adjusters, and a generous cut through the thigh tapering gently toward the ankle.",
+    "details": [
+      "100% High-twist tropical wool",
+      "Horn side adjusters instead of belt loops",
+      "Unfinished hems for custom tailoring"
+    ],
+    "materials": "100% Tropical Wool",
+    "inStock": true,
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Sand Khaki",
+        "hex": "#D8C6AA"
+      }
+    ],
+    "tags": [
+      "trousers",
+      "pleated",
+      "tailored",
+      "wool",
+      "men"
+    ],
+    "collections": [
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": false
+  },
+  {
+    "id": "men-004",
+    "name": "Selvedge Denim Trouser in Raw Indigo",
+    "subtitle": "13.5 oz Kurabo Japanese selvedge denim",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 3800,
+    "originalPrice": 4500,
+    "rating": 4.7,
+    "reviewCount": 19,
+    "badge": "New Arrival",
+    "images": [
+      "https://images.unsplash.com/photo-1542272604-780c96856592?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Woven on vintage shuttle looms in Okayama, Japan. Stiff raw indigo denim designed to mould to the wearer over years of wear, developing subtle personalised fades and honeycombs.",
+    "details": [
+      "13.5oz Raw Kurabo Selvedge Denim",
+      "Classic red selvedge ID stitch",
+      "Solid copper donut buttons and hidden rivets"
+    ],
+    "materials": "100% Indigo Selvedge Cotton",
+    "inStock": true,
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Raw Indigo",
+        "hex": "#1E293B"
+      }
+    ],
+    "tags": [
+      "jeans",
+      "selvedge",
+      "denim",
+      "indigo",
+      "men"
+    ],
+    "collections": [
+      "new-arrivals",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-005",
+    "name": "Atelier Relaxed Trench Coat",
+    "subtitle": "Water-repellent double-weave cotton gabardine",
+    "category": "Jackets and Outerwear",
+    "gender": "men",
+    "price": 18400,
+    "originalPrice": 22000,
+    "rating": 4.9,
+    "reviewCount": 38,
+    "badge": "Bestseller",
+    "images": [
+      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural expression of outerwear. Constructed from high-density Japanese cotton gabardine, featuring dropped raglan shoulders, horn button closures, and a removable storm flap that balances nonchalance with structural precision.",
+    "details": [
+      "100% long-staple organic cotton gabardine",
+      "Water-repellent matte wax finish",
+      "Detachable self-tie waist belt with brass hardware",
+      "Deep welt storm pockets with storm flap closures"
+    ],
+    "materials": "100% Organic Cotton Gabardine",
+    "inStock": true,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Warm Khaki",
+        "hex": "#C2A385"
+      },
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      }
+    ],
+    "tags": [
+      "coat",
+      "outerwear",
+      "trench",
+      "waterproof",
+      "tailored",
+      "men"
+    ],
+    "collections": [
+      "signature",
+      "bestsellers",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "men-006",
+    "name": "Unstructured Wool Twill Overshirt",
+    "subtitle": "Boiled Merino wool blend with horn buttons",
+    "category": "Jackets and Outerwear",
+    "gender": "men",
+    "price": 5200,
+    "originalPrice": 6200,
+    "rating": 4.8,
+    "reviewCount": 15,
+    "badge": "Curated Pick",
+    "images": [
+      "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "The consummate trans-seasonal outer layer. Woven from rich boiled Merino wool that is wind-resistant yet breathable. Wear buttoned as a lightweight jacket or unbuttoned over a Supima tee.",
+    "details": [
+      "80% Merino Wool, 20% Organic Cotton",
+      "Unlined interior with bound seams",
+      "Twin architectural chest pockets"
+    ],
+    "materials": "80% Merino Wool, 20% Cotton",
+    "inStock": true,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Muted Olive",
+        "hex": "#777B63"
+      },
+      {
+        "name": "Charcoal M\u00e9lange",
+        "hex": "#2E302D"
+      }
+    ],
+    "tags": [
+      "overshirt",
+      "jacket",
+      "wool",
+      "layering",
+      "men"
+    ],
+    "collections": [
+      "premium-picks",
+      "new-arrivals"
+    ],
+    "isFeatured": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-007",
+    "name": "Vachetta Minimalist Leather Derby",
+    "subtitle": "Hand-welted Italian calfskin with leather sole",
+    "category": "Footwear",
+    "gender": "men",
+    "price": 7400,
+    "originalPrice": 8900,
+    "rating": 4.9,
+    "reviewCount": 22,
+    "badge": "Atelier Exclusive",
+    "images": [
+      "https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1549298916-b41d501d3772?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Hand-crafted by fourth-generation shoemakers in the Marche region. Pure lines, blind eyelets, and Blake-stitched natural leather outsoles provide silent, enduring elegance.",
+    "details": [
+      "Full-grain Tuscan calf leather",
+      "Vegetable-tanned leather sole with rubber heel insert",
+      "Includes custom cedar shoe trees"
+    ],
+    "materials": "100% Tuscan Calfskin Leather",
+    "inStock": true,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44"
+    ],
+    "colors": [
+      {
+        "name": "Ebony Black",
+        "hex": "#1C1C1C"
+      },
+      {
+        "name": "Cognac Brown",
+        "hex": "#63432B"
+      }
+    ],
+    "tags": [
+      "shoes",
+      "derby",
+      "leather",
+      "formal",
+      "footwear",
+      "men"
+    ],
+    "collections": [
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": false
+  },
+  {
+    "id": "men-008",
+    "name": "Minimal Court Sneaker in Chalk White",
+    "subtitle": "Supple Nappa leather with vulcanised rubber cupsole",
+    "category": "Footwear",
+    "gender": "men",
+    "price": 4900,
+    "originalPrice": 5800,
+    "rating": 4.8,
+    "reviewCount": 45,
+    "badge": "Bestseller",
+    "images": [
+      "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Devoid of logos, excess padding, or visible branding. Made from buttery buttery-soft Italian Nappa leather, lined with breathable calfskin, and set on a durable margom rubber cupsole.",
+    "details": [
+      "Italian full-grain Nappa leather upper",
+      "Vegetable-tanned calfskin lining",
+      "Reinforced heel counter and cushioned arch support"
+    ],
+    "materials": "Full-Grain Nappa Leather, Rubber",
+    "inStock": true,
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "colors": [
+      {
+        "name": "Chalk White",
+        "hex": "#FAF9F6"
+      }
+    ],
+    "tags": [
+      "sneakers",
+      "white-shoes",
+      "leather",
+      "everyday",
+      "men"
+    ],
+    "collections": [
+      "bestsellers",
+      "everyday-essentials"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "men-009",
+    "name": "Chronograph No. 03 in Brushed Titanium",
+    "subtitle": "Sapphire glass crystal with vegetable-tanned strap",
+    "category": "Watches and Jewellery",
+    "gender": "men",
+    "price": 14800,
+    "originalPrice": 17500,
+    "rating": 5,
+    "reviewCount": 14,
+    "badge": "Limited Edition",
+    "images": [
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An exercise in reductionism. Housed in an aerospace-grade matte titanium case measuring 38mm. Features a Swiss quartz movement, unreflective sapphire crystal, and an un-dyed vegetable leather strap.",
+    "details": [
+      "Grade 2 Brushed Titanium 38mm case",
+      "Swiss Ronda 5030.D Quartz Chronograph",
+      "Anti-reflective coated sapphire crystal",
+      "5 ATM water resistance (50 metres)"
+    ],
+    "materials": "Titanium, Sapphire Crystal, Leather",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Titanium / Tan",
+        "hex": "#9E978E"
+      }
+    ],
+    "tags": [
+      "watch",
+      "titanium",
+      "chronograph",
+      "accessories",
+      "men"
+    ],
+    "collections": [
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": false
+  },
+  {
+    "id": "men-010",
+    "name": "Full-Grain Leather Weekender Duffel",
+    "subtitle": "Hand-waxed vegetable tanned leather with solid brass hardware",
+    "category": "Bags and Accessories",
+    "gender": "men",
+    "price": 12500,
+    "originalPrice": 15000,
+    "rating": 4.9,
+    "reviewCount": 18,
+    "badge": "Atelier Exclusive",
+    "images": [
+      "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Engineered for short escapes and overnight voyages. Sourced from certified Tuscan tanneries, developing a luminous patina with age. Includes dedicated shoe compartment and brass feet.",
+    "details": [
+      "Full-grain vegetable-tanned bovine leather",
+      "Heavy solid brass zipper and hardware",
+      "Reinforced rolled leather handles and shoulder strap",
+      "Capacity: 42 Litres"
+    ],
+    "materials": "100% Vegetable-Tanned Leather, Brass",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Dark Oak",
+        "hex": "#4B3621"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#242522"
+      }
+    ],
+    "tags": [
+      "bag",
+      "duffel",
+      "leather",
+      "travel",
+      "men"
+    ],
+    "collections": [
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": false,
+    "isBestseller": false
+  },
+  {
+    "id": "men-011",
+    "name": "Ribbed Combed Cotton Ankle Socks (Pack of 3)",
+    "subtitle": "Reinforced heel and toe with seamless hand-linked toe",
+    "category": "Bags and Accessories",
+    "gender": "men",
+    "price": 650,
+    "originalPrice": 900,
+    "rating": 4.8,
+    "reviewCount": 62,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1586350977771-b3b0abd50c82?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Knitted from organic Aegean combed cotton with extra cushion underfoot. Built with seamless hand-linked toes to eliminate friction and pressure during prolonged wear.",
+    "details": [
+      "Pack of 3 neutral tones",
+      "85% Combed Cotton, 13% Polyamide, 2% Elastane",
+      "Anti-slip ribbed calf band"
+    ],
+    "materials": "85% Organic Combed Cotton",
+    "inStock": true,
+    "sizes": [
+      "Free Size (UK 7-11)"
+    ],
+    "colors": [
+      {
+        "name": "Neutral Trio",
+        "hex": "#D8C6AA"
+      }
+    ],
+    "tags": [
+      "socks",
+      "under-999",
+      "basics",
+      "cotton",
+      "men"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": [
+      "38",
+      "40",
+      "42",
+      "44"
+    ],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": [
+      "shirt",
+      "party",
+      "evening",
+      "formal",
+      "sateen",
+      "men",
+      "cocktail"
+    ],
+    "collections": [
+      "signature",
+      "bestsellers"
+    ],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": [
+      "30",
+      "32",
+      "34",
+      "36"
+    ],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": [
+      "trousers",
+      "party",
+      "evening",
+      "formal",
+      "jacquard",
+      "tailored",
+      "men"
+    ],
+    "collections": [
+      "signature"
+    ],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-012",
+    "name": "Organic Oxford Cloth Button-Down",
+    "subtitle": "Sturdy 2-ply organic yarn in heritage chalk blue",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 2450,
+    "originalPrice": 2900,
+    "rating": 4.7,
+    "reviewCount": 39,
+    "badge": "Customer Favourite",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "A collegiate classic distilled to its pure essence. Substantial basketweave Oxford cloth that softens gracefully with each laundering. Features an authentic soft roll button-down collar.",
+    "details": [
+      "100% GOTS-certified organic cotton",
+      "Single chest patch pocket",
+      "Box pleat with locker loop at the back"
+    ],
+    "materials": "100% Organic Oxford Cotton",
+    "inStock": true,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Chalk Blue",
+        "hex": "#A3B8CC"
+      },
+      {
+        "name": "Crisp White",
+        "hex": "#FFFFFF"
+      }
+    ],
+    "tags": [
+      "oxford",
+      "shirt",
+      "cotton",
+      "workwear",
+      "men"
+    ],
+    "collections": [
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-013",
+    "name": "Fine Gauge Merino Crewneck Sweater",
+    "subtitle": "Extra-fine 19.5 micron Australian Merino wool",
+    "category": "T-shirts and Tops",
+    "gender": "men",
+    "price": 3600,
+    "originalPrice": 4200,
+    "rating": 4.9,
+    "reviewCount": 27,
+    "badge": "New Arrival",
+    "images": [
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1617137984095-74e4e5e3613f?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Featherlight warmth for year-round layering. Spun from ultra-fine Australian Merino fleece that regulates body heat seamlessly from autumn breeze into air-conditioned interiors.",
+    "details": [
+      "100% Extra-fine 19.5-micron Merino Wool",
+      "Fully fashioned saddle shoulder seams",
+      "Ribbed cuffs and waistband with shape retention"
+    ],
+    "materials": "100% Merino Wool",
+    "inStock": true,
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Soft Charcoal",
+        "hex": "#373836"
+      },
+      {
+        "name": "Oatmeal Beige",
+        "hex": "#DDD2C1"
+      }
+    ],
+    "tags": [
+      "knitwear",
+      "merino",
+      "sweater",
+      "wool",
+      "men"
+    ],
+    "collections": [
+      "new-arrivals",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-014",
+    "name": "Hand-Stitched Bridle Leather Cardholder",
+    "subtitle": "Solid vegetable tanned English bridle leather",
+    "category": "Bags and Accessories",
+    "gender": "men",
+    "price": 950,
+    "originalPrice": 1400,
+    "rating": 4.9,
+    "reviewCount": 52,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1627123424574-724758594e93?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Crafted with burnished, hand-waxed edges and waxed linen saddle stitching. Holds 6 cards plus folded bills with zero pocket bulk. Built to age gracefully over decades.",
+    "details": [
+      "Hand-cut vegetable-tanned bridle leather",
+      "Debossed AVELUNE monogram inside",
+      "4 card slots + 1 central currency compartment"
+    ],
+    "materials": "English Bridle Leather",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Cognac Tan",
+        "hex": "#8B4513"
+      },
+      {
+        "name": "Pitch Black",
+        "hex": "#1C1C1C"
+      }
+    ],
+    "tags": [
+      "wallet",
+      "cardholder",
+      "leather",
+      "under-999",
+      "men"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-001",
+    "name": "Raw Mulberry Silk Wrap Dress",
+    "subtitle": "Fluid biased cut with hand-tied waist cinch",
+    "category": "Dresses and Ethnic Wear",
+    "gender": "women",
+    "price": 6800,
+    "originalPrice": 8200,
+    "rating": 4.9,
+    "reviewCount": 41,
+    "badge": "Bestseller",
+    "images": [
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1539109136881-3be0616acf4b?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Drapes with liquid fluidity. Spun from pure hand-reeled mulberry silk, cut on the bias to caress the natural silhouette without clinging. Finished with delicate hand-rolled hems.",
+    "details": [
+      "100% Grade 6A Mulberry Raw Silk",
+      "Adjustable internal tie with exterior sash",
+      "Subtle v-neckline with French seam finishing"
+    ],
+    "materials": "100% Mulberry Silk",
+    "inStock": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      {
+        "name": "Champagne Beige",
+        "hex": "#D8C6AA"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#242522"
+      },
+      {
+        "name": "Muted Rose",
+        "hex": "#C49A94"
+      }
+    ],
+    "tags": [
+      "dress",
+      "silk",
+      "wrap-dress",
+      "evening",
+      "women"
+    ],
+    "collections": [
+      "bestsellers",
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "wom-002",
+    "name": "Chanderi Handloom Kurta & Dupatta Set",
+    "subtitle": "Zari border detailing with sheer silk-cotton weave",
+    "category": "Dresses and Ethnic Wear",
+    "gender": "women",
+    "price": 5400,
+    "originalPrice": 6500,
+    "rating": 4.9,
+    "reviewCount": 36,
+    "badge": "New Arrival",
+    "images": [
+      "https://images.unsplash.com/photo-1610030469983-98e550d6193c?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Handwoven in the heritage looms of Madhya Pradesh. Featherlight silk-cotton Chanderi fabric with delicate golden zari motifs along the neckline, paired with a feather-soft sheer dupatta.",
+    "details": [
+      "70% Pure Silk, 30% Fine Cotton",
+      "Hand-embroidered tonal threadwork",
+      "Includes matching slip and hand-finished dupatta"
+    ],
+    "materials": "Silk Cotton Chanderi, Zari",
+    "inStock": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Soft Ivory",
+        "hex": "#F8F6F1"
+      },
+      {
+        "name": "Sage Olive",
+        "hex": "#777B63"
+      }
+    ],
+    "tags": [
+      "kurta",
+      "ethnic",
+      "chanderi",
+      "festive",
+      "handloom",
+      "women"
+    ],
+    "collections": [
+      "new-arrivals",
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-003",
+    "name": "Tailored Wide-Leg Linen Trouser",
+    "subtitle": "High-waisted silhouette in heavyweight Belgian linen",
+    "category": "Trousers and Jeans",
+    "gender": "women",
+    "price": 3600,
+    "originalPrice": 4200,
+    "rating": 4.8,
+    "reviewCount": 29,
+    "badge": "Curated Pick",
+    "images": [
+      "https://images.unsplash.com/photo-1509631179647-0177331693ae?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1551803091-e20673f15770?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Architectural precision meets breezy ease. Sitting cleanly on the high natural waist with sharp pressed front creases, flowing into an elongated wide leg that brushes the floor.",
+    "details": [
+      "100% European Flax Linen",
+      "Deep slanted side pockets and clean welt back pockets",
+      "Concealed zip fly with hook-and-bar closure"
+    ],
+    "materials": "100% Belgian Flax Linen",
+    "inStock": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      {
+        "name": "Soft Cream",
+        "hex": "#EFE9DF"
+      },
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      }
+    ],
+    "tags": [
+      "linen",
+      "trousers",
+      "wide-leg",
+      "summer",
+      "women"
+    ],
+    "collections": [
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "wom-004",
+    "name": "Double-Faced Cashmere Wrap Coat",
+    "subtitle": "Unlined hand-stitched double-face cashmere in camel m\u00e9lange",
+    "category": "Jackets and Outerwear",
+    "gender": "women",
+    "price": 24500,
+    "originalPrice": 28000,
+    "rating": 5,
+    "reviewCount": 16,
+    "badge": "Atelier Exclusive",
+    "images": [
+      "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An unstructured wrap coat created from two bonded layers of virgin Mongolian cashmere, completely split and hand-sewn along every edge with invisible stitches. Fluid and featherlight yet deeply warm.",
+    "details": [
+      "100% Grade-A Mongolian virgin cashmere",
+      "Hand-finished double-face construction",
+      "Detachable self-tie cashmere waist sash",
+      "Deep inset side pockets"
+    ],
+    "materials": "100% Virgin Mongolian Cashmere",
+    "inStock": true,
+    "sizes": [
+      "XS/S",
+      "M/L"
+    ],
+    "colors": [
+      {
+        "name": "Camel M\u00e9lange",
+        "hex": "#C2A385"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#DDD2C1"
+      }
+    ],
+    "tags": [
+      "coat",
+      "cashmere",
+      "outerwear",
+      "luxury",
+      "women"
+    ],
+    "collections": [
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": false
+  },
+  {
+    "id": "wom-005",
+    "name": "Organic Ribbed Cotton Tank",
+    "subtitle": "Micro-ribbed certified organic cotton with clean binding",
+    "category": "T-shirts and Tops",
+    "gender": "women",
+    "price": 790,
+    "originalPrice": 1100,
+    "rating": 4.8,
+    "reviewCount": 74,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "The foundation of modern daily dressing. Cut with a sculpted scoop neckline and wide bra-friendly straps, woven with 5% elastane for endless recovery without bagging.",
+    "details": [
+      "95% Organic Cotton, 5% Elastane micro-rib",
+      "Double-needle hem and armhole binding",
+      "Tuckable hip-length silhouette"
+    ],
+    "materials": "95% Organic Cotton, 5% Elastane",
+    "inStock": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "colors": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      },
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Champagne Beige",
+        "hex": "#D8C6AA"
+      }
+    ],
+    "tags": [
+      "tank",
+      "basics",
+      "under-999",
+      "ribbed",
+      "cotton",
+      "women"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-006",
+    "name": "Pleated Poplin Tiered Midi Skirt",
+    "subtitle": "Crisp Italian cotton poplin with concealed zip",
+    "category": "Dresses and Ethnic Wear",
+    "gender": "women",
+    "price": 3200,
+    "originalPrice": 3800,
+    "rating": 4.7,
+    "reviewCount": 18,
+    "badge": "New Arrival",
+    "images": [
+      "https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Constructed from high-thread-count cotton poplin that holds dramatic volumetric shape. Features subtle pin-tuck tiers, an elasticated back waist for comfort, and hidden side seam pockets.",
+    "details": [
+      "100% Crisp Italian Cotton Poplin",
+      "Discreet side seam pockets",
+      "Lined in soft organic cotton voile"
+    ],
+    "materials": "100% Cotton Poplin",
+    "inStock": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      {
+        "name": "Charcoal Black",
+        "hex": "#242522"
+      },
+      {
+        "name": "Soft Cream",
+        "hex": "#EFE9DF"
+      }
+    ],
+    "tags": [
+      "skirt",
+      "poplin",
+      "midi",
+      "summer",
+      "women"
+    ],
+    "collections": [
+      "new-arrivals",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-007",
+    "name": "Structured Leather Baguette Bag",
+    "subtitle": "Smooth box calf leather with magnetic clasp closure",
+    "category": "Handbags and Accessories",
+    "gender": "women",
+    "price": 6200,
+    "originalPrice": 7500,
+    "rating": 4.9,
+    "reviewCount": 31,
+    "badge": "Customer Favourite",
+    "images": [
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Sleek geometric silhouette tucked comfortably under the shoulder. Crafted from stiff vegetable box calfskin with a luminous semi-gloss finish and custom champagne-toned hardware.",
+    "details": [
+      "100% Box Calf Leather",
+      "Interior zip compartment and card slot",
+      "Detachable adjustable shoulder strap"
+    ],
+    "materials": "Calfskin Leather, Microfiber Suede",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Champagne Tan",
+        "hex": "#D8C6AA"
+      }
+    ],
+    "tags": [
+      "handbag",
+      "bag",
+      "leather",
+      "accessories",
+      "women"
+    ],
+    "collections": [
+      "bestsellers",
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "wom-008",
+    "name": "Sculpted Brass Drop Earrings",
+    "subtitle": "18k gold vermeil over recycled solid brass",
+    "category": "Jewellery and Accessories",
+    "gender": "women",
+    "price": 1850,
+    "originalPrice": 2400,
+    "rating": 4.8,
+    "reviewCount": 42,
+    "badge": "Curated Pick",
+    "images": [
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Sculptural organic pebble forms that catch and diffuse light gently. Hand-cast using the ancient lost-wax casting technique and finished in thick 2.5-micron 18k gold vermeil.",
+    "details": [
+      "Recycled solid brass with 18k Gold Vermeil",
+      "Hypoallergenic sterling silver ear posts",
+      "Weight: 4.2g each (comfortably featherlight)"
+    ],
+    "materials": "18k Gold Vermeil, Recycled Brass",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Warm Gold",
+        "hex": "#D4AF37"
+      }
+    ],
+    "tags": [
+      "earrings",
+      "jewellery",
+      "gold",
+      "accessories",
+      "women"
+    ],
+    "collections": [
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-009",
+    "name": "Minimal Strappy Leather Sandal",
+    "subtitle": "Supple kidskin leather with squared architectural toe",
+    "category": "Footwear",
+    "gender": "women",
+    "price": 4200,
+    "originalPrice": 4900,
+    "rating": 4.7,
+    "reviewCount": 23,
+    "badge": "New Arrival",
+    "images": [
+      "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1562273138-f46be4ebdf33?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "A whisper-thin footwear statement. Slender tubular kidskin straps frame the foot elegantly, set upon a padded insole and low 15mm stacked leather heel for effortless walking.",
+    "details": [
+      "Buttery kidskin leather upper",
+      "Cushioned memory foam footbed wrapped in leather",
+      "Slip-resistant rubber heel cap"
+    ],
+    "materials": "100% Kidskin Leather, Leather Sole",
+    "inStock": true,
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40"
+    ],
+    "colors": [
+      {
+        "name": "Ivory White",
+        "hex": "#FAF9F6"
+      },
+      {
+        "name": "Charcoal Black",
+        "hex": "#242522"
+      }
+    ],
+    "tags": [
+      "sandals",
+      "shoes",
+      "footwear",
+      "summer",
+      "women"
+    ],
+    "collections": [
+      "new-arrivals",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-010",
+    "name": "Pure Mulberry Silk Bandana / Neck Scarf",
+    "subtitle": "Hand-rolled edges with minimalist geometric artwork",
+    "category": "Jewellery and Accessories",
+    "gender": "women",
+    "price": 850,
+    "originalPrice": 1200,
+    "rating": 4.9,
+    "reviewCount": 48,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1601924994987-69e26d50dc26?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An endlessly versatile accent. Wear tied around the neck, knotted to a handbag handle, or as a silk hair ribbon. Features hand-drawn neutral geometric borders.",
+    "details": [
+      "100% 16-momme Mulberry Silk Twill",
+      "Dimensions: 55cm \u00d7 55cm",
+      "Traditional hand-rolled and hand-stitched borders"
+    ],
+    "materials": "100% Silk Twill",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Champagne & Charcoal",
+        "hex": "#D8C6AA"
+      }
+    ],
+    "tags": [
+      "scarf",
+      "silk",
+      "under-999",
+      "accessories",
+      "women"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-011",
+    "name": "Relaxed Poplin Oversized Shirt",
+    "subtitle": "Dropped shoulders with curved hem in Italian poplin",
+    "category": "T-shirts and Tops",
+    "gender": "women",
+    "price": 2800,
+    "originalPrice": 3400,
+    "rating": 4.8,
+    "reviewCount": 35,
+    "badge": "Customer Favourite",
+    "images": [
+      "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Borrowed from the menswear wardrobe with elevated feminine proportions. Cut generous and crisp, perfect tucked into high-rise denim or worn open over swimwear.",
+    "details": [
+      "100% Long-Staple Organic Cotton",
+      "Genuine mother-of-pearl buttons",
+      "Elongated cuffs with twin button adjustments"
+    ],
+    "materials": "100% Organic Cotton Poplin",
+    "inStock": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      },
+      {
+        "name": "Sky Stripe",
+        "hex": "#B8CEDB"
+      }
+    ],
+    "tags": [
+      "shirt",
+      "poplin",
+      "oversized",
+      "basics",
+      "women"
+    ],
+    "collections": [
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-012",
+    "name": "Washed Modal Lounge Slip Dress",
+    "subtitle": "Eco-certified Tencel modal with delicate halter neckline",
+    "category": "Dresses and Ethnic Wear",
+    "gender": "women",
+    "price": 2400,
+    "originalPrice": 3000,
+    "rating": 4.9,
+    "reviewCount": 28,
+    "badge": "Curated Pick",
+    "images": [
+      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Cloud-soft Austrian Tencel modal with an ultra-matte sueded touch. Fluid drape that moves like running water, designed for slow mornings at home or effortless evening outings.",
+    "details": [
+      "92% Tencel Modal, 8% Spandex",
+      "Adjustable criss-cross spaghetti back straps",
+      "Double-lined bust area for full coverage"
+    ],
+    "materials": "Tencel Modal",
+    "inStock": true,
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L"
+    ],
+    "colors": [
+      {
+        "name": "Soft Olive",
+        "hex": "#777B63"
+      },
+      {
+        "name": "Cream Sand",
+        "hex": "#EFE9DF"
+      }
+    ],
+    "tags": [
+      "dress",
+      "slip",
+      "modal",
+      "minimal",
+      "women"
+    ],
+    "collections": [
+      "everyday-essentials",
+      "new-arrivals"
+    ],
+    "isFeatured": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-013",
+    "name": "Straight-Leg High Rise Denim",
+    "subtitle": "12 oz comfort-stretch organic denim in washed bone",
+    "category": "Trousers and Jeans",
+    "gender": "women",
+    "price": 3400,
+    "originalPrice": 4000,
+    "rating": 4.7,
+    "reviewCount": 31,
+    "badge": "Customer Favourite",
+    "images": [
+      "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542272604-780c96856592?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "The definitive straight-leg jeans. Cut with an authentic high waist that holds the midriff and elongates the silhouette, washed to a soft vintage ecru hue.",
+    "details": [
+      "98% Organic Cotton, 2% Recycled Elastane",
+      "Vintage-style copper button fly",
+      "Clean finished hem with gentle distressing"
+    ],
+    "materials": "98% Organic Cotton Denim",
+    "inStock": true,
+    "sizes": [
+      "25",
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+    ],
+    "colors": [
+      {
+        "name": "Washed Ecru",
+        "hex": "#EBE6DC"
+      }
+    ],
+    "tags": [
+      "jeans",
+      "denim",
+      "high-rise",
+      "everyday",
+      "women"
+    ],
+    "collections": [
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-014",
+    "name": "Hand-Hammered Solid Brass Cuff",
+    "subtitle": "Artisanal open cuff with organic hammered texture",
+    "category": "Jewellery and Accessories",
+    "gender": "women",
+    "price": 920,
+    "originalPrice": 1350,
+    "rating": 4.8,
+    "reviewCount": 37,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1611591475877-c335e23c0c1b?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1630019852942-f89202989a59?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Forged by hand by traditional metal artisans in Jaipur. Gently adjustable to fit any wrist size comfortably, sealed with a tarnish-resistant coating for lasting brilliance.",
+    "details": [
+      "Solid pure brass with protective lacquer finish",
+      "Width: 12mm",
+      "Gently malleable to customize fit"
+    ],
+    "materials": "100% Solid Brass",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Antique Gold",
+        "hex": "#D4AF37"
+      }
+    ],
+    "tags": [
+      "cuff",
+      "bracelet",
+      "jewellery",
+      "under-999",
+      "women"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "wom-015",
+    "name": "Textured Boucl\u00e9 Cocoon Cardigan",
+    "subtitle": "Chunky alpaca and wool blend with horn buttons",
+    "category": "Jackets and Outerwear",
+    "gender": "women",
+    "price": 6900,
+    "originalPrice": 8500,
+    "rating": 5,
+    "reviewCount": 19,
+    "badge": "Atelier Exclusive",
+    "images": [
+      "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1544441893-675973e31985?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Cocooning volume spun from Peruvian baby alpaca boucl\u00e9 yarn. Exceptionally plush and insulating with a tactile nubby surface that catches natural light beautifully.",
+    "details": [
+      "65% Baby Alpaca, 25% Wool, 10% Polyamide",
+      "Chunky hand-carved horn buttons",
+      "Dropped shoulder with relaxed rib trim"
+    ],
+    "materials": "Peruvian Baby Alpaca Boucl\u00e9",
+    "inStock": true,
+    "sizes": [
+      "XS/S",
+      "M/L"
+    ],
+    "colors": [
+      {
+        "name": "Oatmeal Boucl\u00e9",
+        "hex": "#DDD2C1"
+      },
+      {
+        "name": "Warm Charcoal",
+        "hex": "#373836"
+      }
+    ],
+    "tags": [
+      "cardigan",
+      "knitwear",
+      "alpaca",
+      "outerwear",
+      "women"
+    ],
+    "collections": [
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": false
+  },
+  {
+    "id": "wom-016",
+    "name": "Woven Raffia Market Tote",
+    "subtitle": "Hand-plaited Madagascar raffia with bridle leather straps",
+    "category": "Handbags and Accessories",
+    "gender": "women",
+    "price": 4600,
+    "originalPrice": 5400,
+    "rating": 4.8,
+    "reviewCount": 22,
+    "badge": "New Arrival",
+    "images": [
+      "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Consciously handcrafted by women artisans using sustainably harvested natural palm raffia. Spacious enough for farmers market finds, a laptop, or seaside essentials.",
+    "details": [
+      "100% Natural Madagascar Raffia",
+      "Supple vegetable-tanned leather shoulder handles",
+      "Interior linen pouch with drawstring closure"
+    ],
+    "materials": "Natural Raffia Palm, Calf Leather",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Natural Sand",
+        "hex": "#D8C6AA"
+      }
+    ],
+    "tags": [
+      "tote",
+      "bag",
+      "raffia",
+      "summer",
+      "handcrafted",
+      "women"
+    ],
+    "collections": [
+      "new-arrivals",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "kid-001",
+    "name": "Organic Cotton Breton Stripe Tee",
+    "subtitle": "Ultra-soft 200 GSM hypoallergenic organic jersey",
+    "category": "Kids' Clothing",
+    "gender": "kids",
+    "price": 650,
+    "originalPrice": 850,
+    "rating": 4.9,
+    "reviewCount": 42,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Designed for endless movement and gentle on sensitive skin. GOTS-certified organic combed cotton with flatlock seams to prevent itching or irritation during play.",
+    "details": [
+      "100% GOTS-Certified Organic Cotton",
+      "Tagless neck label with itch-free screen printing",
+      "Reinforced shoulder snap buttons on smaller sizes"
+    ],
+    "materials": "100% Organic Cotton Jersey",
+    "inStock": true,
+    "sizes": [
+      "2-3Y",
+      "3-4Y",
+      "4-5Y",
+      "5-6Y",
+      "7-8Y"
+    ],
+    "colors": [
+      {
+        "name": "Ivory & Navy",
+        "hex": "#1E293B"
+      },
+      {
+        "name": "Ivory & Olive",
+        "hex": "#777B63"
+      }
+    ],
+    "tags": [
+      "kids",
+      "t-shirt",
+      "stripes",
+      "organic",
+      "under-999"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "kid-002",
+    "name": "Juniors Cotton Linen Festive Kurta Set",
+    "subtitle": "Breathable cotton-linen with wooden buttons and churidar",
+    "category": "Kids' Clothing",
+    "gender": "kids",
+    "price": 1850,
+    "originalPrice": 2400,
+    "rating": 4.8,
+    "reviewCount": 29,
+    "badge": "Curated Pick",
+    "images": [
+      "https://images.unsplash.com/photo-1503944543280-7570776b1704?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Celebratory attire crafted with genuine comfort in mind. Airy cotton-linen blend that keeps little ones cool during family ceremonies and festive celebrations.",
+    "details": [
+      "60% Fine Cotton, 40% Flax Linen",
+      "Natural wooden button placket",
+      "Includes elasticated organic cotton pyjama bottom"
+    ],
+    "materials": "Cotton Linen Blend",
+    "inStock": true,
+    "sizes": [
+      "2-3Y",
+      "4-5Y",
+      "6-7Y",
+      "8-9Y",
+      "10-12Y"
+    ],
+    "colors": [
+      {
+        "name": "Champagne Beige",
+        "hex": "#D8C6AA"
+      },
+      {
+        "name": "Muted Olive",
+        "hex": "#777B63"
+      }
+    ],
+    "tags": [
+      "kids",
+      "kurta",
+      "festive",
+      "ethnic",
+      "linen"
+    ],
+    "collections": [
+      "signature",
+      "new-arrivals"
+    ],
+    "isFeatured": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "kid-003",
+    "name": "Juniors Tiered Muslin Pinafore Dress",
+    "subtitle": "Four-layer organic cotton muslin with adjustable straps",
+    "category": "Kids' Clothing",
+    "gender": "kids",
+    "price": 1650,
+    "originalPrice": 2100,
+    "rating": 4.9,
+    "reviewCount": 34,
+    "badge": "Customer Favourite",
+    "images": [
+      "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Floaty, breathable four-layer organic muslin that gets softer with every wash cycle. Features two buttonhole settings on the shoulder straps so it grows along with your child.",
+    "details": [
+      "100% GOTS-Certified Organic Muslin Cotton",
+      "Adjustable coconut shell button fastenings",
+      "Two roomy front patch pockets for treasures"
+    ],
+    "materials": "100% Organic Muslin Cotton",
+    "inStock": true,
+    "sizes": [
+      "18-24M",
+      "2-3Y",
+      "3-4Y",
+      "4-5Y",
+      "6-7Y"
+    ],
+    "colors": [
+      {
+        "name": "Warm Cream",
+        "hex": "#EFE9DF"
+      },
+      {
+        "name": "Dusty Rose",
+        "hex": "#C49A94"
+      }
+    ],
+    "tags": [
+      "kids",
+      "dress",
+      "muslin",
+      "girls",
+      "organic"
+    ],
+    "collections": [
+      "bestsellers",
+      "everyday-essentials"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "kid-004",
+    "name": "Juniors Elasticated Canvas Trousers",
+    "subtitle": "Sturdy washed cotton canvas with reinforced knee patches",
+    "category": "Kids' Clothing",
+    "gender": "kids",
+    "price": 950,
+    "originalPrice": 1300,
+    "rating": 4.8,
+    "reviewCount": 26,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Engineered for tree-climbing, playground running, and messy adventures. Durable cotton canvas with double-layered knee articulation and a flexible drawstring waistband.",
+    "details": [
+      "100% Heavy-duty Organic Cotton Canvas",
+      "Reinforced double-fabric knee patches",
+      "Soft ribbed cotton interior waistband"
+    ],
+    "materials": "100% Cotton Canvas",
+    "inStock": true,
+    "sizes": [
+      "2-3Y",
+      "4-5Y",
+      "6-7Y",
+      "8-9Y"
+    ],
+    "colors": [
+      {
+        "name": "Olive Khaki",
+        "hex": "#777B63"
+      },
+      {
+        "name": "Warm Biscuit",
+        "hex": "#D8C6AA"
+      }
+    ],
+    "tags": [
+      "kids",
+      "trousers",
+      "pants",
+      "canvas",
+      "under-999"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "kid-005",
+    "name": "Juniors Recycled Canvas Mini Backpack",
+    "subtitle": "Water-resistant coated canvas with ergonomic padded straps",
+    "category": "Kids' Accessories",
+    "gender": "kids",
+    "price": 1450,
+    "originalPrice": 1900,
+    "rating": 4.9,
+    "reviewCount": 31,
+    "badge": "New Arrival",
+    "images": [
+      "https://images.unsplash.com/photo-1544816155-12df9643f363?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "A miniature version of our signature adult bags. Scaled to comfortably fit school folders, snacks, and water bottles. Includes reflective safety piping for evening visibility.",
+    "details": [
+      "100% Recycled Cotton Canvas with water-resistant wax",
+      "Easy-pull brass zipper pulls for small hands",
+      "Capacity: 8 Litres"
+    ],
+    "materials": "Recycled Canvas, Cotton Webbing",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Forest Green",
+        "hex": "#4B5320"
+      },
+      {
+        "name": "Oatmeal",
+        "hex": "#DDD2C1"
+      }
+    ],
+    "tags": [
+      "backpack",
+      "bag",
+      "kids",
+      "school",
+      "accessories"
+    ],
+    "collections": [
+      "new-arrivals",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "kid-006",
+    "name": "Toddler Leather Soft-Sole Moccasin",
+    "subtitle": "Naturally tanned chrome-free leather with elastic ankle collar",
+    "category": "Kids' Accessories",
+    "gender": "kids",
+    "price": 1200,
+    "originalPrice": 1600,
+    "rating": 4.9,
+    "reviewCount": 47,
+    "badge": "Bestseller",
+    "images": [
+      "https://images.unsplash.com/photo-1515488042361-ee00e0ddd4e4?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Endorsed by pediatric orthopedists to support natural foot bone development. Supple chrome-free leather allows little toes to grip the floor naturally during first steps.",
+    "details": [
+      "100% Chrome-Free Certified Bovine Leather",
+      "Non-slip textured suede outsole",
+      "Hidden elastic collar stays securely on feet"
+    ],
+    "materials": "Chrome-Free Leather, Suede",
+    "inStock": true,
+    "sizes": [
+      "0-6M",
+      "6-12M",
+      "12-18M",
+      "18-24M"
+    ],
+    "colors": [
+      {
+        "name": "Caramel Tan",
+        "hex": "#A0522D"
+      },
+      {
+        "name": "Soft Cream",
+        "hex": "#EFE9DF"
+      }
+    ],
+    "tags": [
+      "moccasins",
+      "shoes",
+      "baby",
+      "toddler",
+      "kids"
+    ],
+    "collections": [
+      "bestsellers",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "kid-007",
+    "name": "Juniors Cable Knit Wool Cardigan",
+    "subtitle": "Organic merino wool with wooden toggles",
+    "category": "Kids' Clothing",
+    "gender": "kids",
+    "price": 2400,
+    "originalPrice": 3000,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Atelier Exclusive",
+    "images": [
+      "https://images.unsplash.com/photo-1622290291468-a28f7a7dc6a8?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Heirloom quality knitwear designed to be passed down through siblings. Knitted with chunky organic merino yarn that provides natural temperature regulation without synthetic weight.",
+    "details": [
+      "100% Extra-soft Organic Merino Wool",
+      "Handmade turned olive wood toggle closures",
+      "Deep roll-up cuffs to accommodate growth spurts"
+    ],
+    "materials": "100% Organic Merino Wool",
+    "inStock": true,
+    "sizes": [
+      "2-3Y",
+      "4-5Y",
+      "6-7Y",
+      "8-9Y"
+    ],
+    "colors": [
+      {
+        "name": "Cream Oatmeal",
+        "hex": "#DDD2C1"
+      },
+      {
+        "name": "Charcoal Grey",
+        "hex": "#242522"
+      }
+    ],
+    "tags": [
+      "cardigan",
+      "knitwear",
+      "wool",
+      "merino",
+      "kids"
+    ],
+    "collections": [
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": false,
+    "isBestseller": false
+  },
+  {
+    "id": "kid-008",
+    "name": "Juniors Organic Cotton Pajama Set",
+    "subtitle": "Ultra-gentle waffle knit top and drawstring pant",
+    "category": "Kids' Clothing",
+    "gender": "kids",
+    "price": 890,
+    "originalPrice": 1200,
+    "rating": 4.9,
+    "reviewCount": 56,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Cozy bedtime comfort for deep restful sleep. Breathable textured waffle knit traps cozy body warmth while circulating fresh air all through the night.",
+    "details": [
+      "100% Certified Organic Waffle Cotton",
+      "Non-restrictive wide elastic waist",
+      "Ribbed cuffs keep warmth inside"
+    ],
+    "materials": "100% Organic Waffle Cotton",
+    "inStock": true,
+    "sizes": [
+      "2-3Y",
+      "4-5Y",
+      "6-7Y",
+      "8-9Y",
+      "10-11Y"
+    ],
+    "colors": [
+      {
+        "name": "Warm Biscuit",
+        "hex": "#D8C6AA"
+      },
+      {
+        "name": "Sage Green",
+        "hex": "#777B63"
+      }
+    ],
+    "tags": [
+      "pajamas",
+      "sleepwear",
+      "organic",
+      "under-999",
+      "kids"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  },
+  {
+    "id": "men-015",
+    "name": "Sateen Evening Party Shirt",
+    "subtitle": "Lustrous high-density sateen weave with hidden placket",
+    "category": "Shirts",
+    "gender": "men",
+    "price": 1690,
+    "originalPrice": 2200,
+    "rating": 4.8,
+    "reviewCount": 24,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tailored for cocktail evenings and celebration gatherings. Cut from smooth, light-catching Egyptian cotton sateen with a streamlined concealed button placket and sculpted cutaway collar.",
+    "details": [
+      "100% Long-Staple Cotton Sateen",
+      "Concealed placket for clean evening lines",
+      "Reinforced collar stays",
+      "Tonal mother-of-pearl buttons"
+    ],
+    "materials": "100% Egyptian Cotton Sateen",
+    "inStock": true,
+    "sizes": ["38", "40", "42", "44"],
+    "colors": [
+      {
+        "name": "Midnight Black",
+        "hex": "#1A1A1A"
+      },
+      {
+        "name": "Warm Ivory",
+        "hex": "#F8F6F1"
+      }
+    ],
+    "tags": ["shirt", "party", "evening", "formal", "sateen", "men", "cocktail"],
+    "collections": ["signature", "bestsellers"],
+    "isFeatured": true,
+    "isBestseller": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "men-016",
+    "name": "Slim Jacquard Evening Trousers",
+    "subtitle": "Tonal micro-weave jacquard with flat front tailoring",
+    "category": "Trousers and Jeans",
+    "gender": "men",
+    "price": 1950,
+    "originalPrice": 2600,
+    "rating": 4.8,
+    "reviewCount": 19,
+    "badge": "Partywear",
+    "images": [
+      "https://images.unsplash.com/photo-1479064555552-3ef4979f8908?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An architectural evening trouser engineered with subtle tonal jacquard texture that catches low ambient lighting. Finished with clean slant pockets and blind-hemmed cuffs.",
+    "details": [
+      "Tonal micro-jacquard stretch twill",
+      "Clean tab waistband with interior hook closure",
+      "Double welt back pockets",
+      "Pre-tailored slim tapered fit"
+    ],
+    "materials": "98% Combed Cotton, 2% Elastane",
+    "inStock": true,
+    "sizes": ["30", "32", "34", "36"],
+    "colors": [
+      {
+        "name": "Deep Charcoal",
+        "hex": "#242522"
+      },
+      {
+        "name": "Midnight Navy",
+        "hex": "#1B2430"
+      }
+    ],
+    "tags": ["trousers", "party", "evening", "formal", "jacquard", "tailored", "men"],
+    "collections": ["signature"],
+    "isFeatured": true,
+    "isBestseller": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "kid-009",
+    "name": "Juniors Cotton Canvas Sun Bucket Hat",
+    "subtitle": "UPF 50+ broad brim with chin tie safety strap",
+    "category": "Kids' Accessories",
+    "gender": "kids",
+    "price": 490,
+    "originalPrice": 750,
+    "rating": 4.8,
+    "reviewCount": 38,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1596870230751-ebdfce98ec42?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1514090458221-65bb69cf63e6?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Tested UPF 50+ protection against harsh sunlight. Wide circular brim shields little faces, necks, and ears during beach walks or outdoor adventures.",
+    "details": [
+      "100% Washed Cotton Canvas",
+      "Breakaway velcro chin strap for child safety",
+      "Foldable into any pocket or tote"
+    ],
+    "materials": "100% Cotton Canvas",
+    "inStock": true,
+    "sizes": [
+      "1-3Y",
+      "4-7Y"
+    ],
+    "colors": [
+      {
+        "name": "Ivory Cream",
+        "hex": "#F8F6F1"
+      },
+      {
+        "name": "Olive Khaki",
+        "hex": "#777B63"
+      }
+    ],
+    "tags": [
+      "hat",
+      "sun-hat",
+      "summer",
+      "under-999",
+      "kids"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials"
+    ],
+    "isFeatured": false,
+    "isBestseller": false
+  },
+  {
+    "id": "kid-010",
+    "name": "Juniors Classic Denim Jacket",
+    "subtitle": "10 oz washed organic cotton denim with copper buttons",
+    "category": "Kids' Clothing",
+    "gender": "kids",
+    "price": 2100,
+    "originalPrice": 2600,
+    "rating": 4.9,
+    "reviewCount": 21,
+    "badge": "Curated Pick",
+    "images": [
+      "https://images.unsplash.com/photo-1503944543280-7570776b1704?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519238263530-99bdd11df2ea?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "An iconic silhouette tailored for children. Pre-softened with natural enzymes so there is zero scratchiness or rigidity on day one.",
+    "details": [
+      "100% Organic Cotton Denim (10 oz)",
+      "Front flap pockets and side slip pockets",
+      "Lead-free embossed metal shank buttons"
+    ],
+    "materials": "100% Organic Cotton Denim",
+    "inStock": true,
+    "sizes": [
+      "3-4Y",
+      "5-6Y",
+      "7-8Y",
+      "9-10Y"
+    ],
+    "colors": [
+      {
+        "name": "Vintage Stone Wash",
+        "hex": "#879EB2"
+      }
+    ],
+    "tags": [
+      "denim",
+      "jacket",
+      "kids",
+      "outerwear",
+      "classic"
+    ],
+    "collections": [
+      "everyday-essentials",
+      "new-arrivals"
+    ],
+    "isFeatured": false,
+    "isNewArrival": true
+  },
+  {
+    "id": "liv-001",
+    "name": "Smoked Travertine Catchall & Fluted Cup",
+    "subtitle": "Honed Roman travertine stone with architectural fluting",
+    "category": "Contemporary Living",
+    "gender": "unisex",
+    "price": 4800,
+    "rating": 4.9,
+    "reviewCount": 24,
+    "badge": "New Arrival",
+    "images": [
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1612196808214-b8e1d6145a8c?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Carved from monolithic blocks of porous Roman travertine. Honed by hand to a velvet matte finish that captures shadow and natural daylight across desks, vanities, or nightstands.",
+    "details": [
+      "Solid natural travertine stone quarried in Tivoli",
+      "Hand-fluted outer rim with tactile relief",
+      "Treated with food-safe protective stone seal",
+      "Cork base backing prevents surface scratching"
+    ],
+    "materials": "100% Honed Roman Travertine Stone",
+    "dimensions": "Tray: 24cm \u00d7 16cm \u00d7 3cm; Cup: \u00d8 8cm, Height 10cm",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Beige Travertine",
+        "hex": "#D7CCBD"
+      }
+    ],
+    "tags": [
+      "travertine",
+      "stone",
+      "living",
+      "homeware",
+      "accessories"
+    ],
+    "collections": [
+      "new-arrivals",
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isNewArrival": true
+  },
+  {
+    "id": "liv-002",
+    "name": "Artisan Sand Cast Brass Vessel",
+    "subtitle": "Brushed raw brass with unlacquered natural aging",
+    "category": "Contemporary Living",
+    "gender": "unisex",
+    "price": 5600,
+    "originalPrice": 6500,
+    "rating": 4.9,
+    "reviewCount": 17,
+    "badge": "Limited Edition",
+    "images": [
+      "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Solid brass sand-cast by generational artisans. Left purposefully unlacquered to develop a rich, moody patina over decades of tactile everyday interaction.",
+    "details": [
+      "Solid virgin sand-cast brass",
+      "Hand-turned rim and satin exterior finish",
+      "Weight: 1.8 kg"
+    ],
+    "materials": "100% Solid Brass",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Raw Brass",
+        "hex": "#C5A059"
+      }
+    ],
+    "tags": [
+      "brass",
+      "vessel",
+      "home",
+      "living",
+      "artisan"
+    ],
+    "collections": [
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": false,
+    "isBestseller": false
+  },
+  {
+    "id": "liv-003",
+    "name": "Tactile Boucl\u00e9 Wool Throw Blanket",
+    "subtitle": "Hand-woven Peruvian alpaca and Merino wool blend",
+    "category": "Contemporary Living",
+    "gender": "unisex",
+    "price": 8200,
+    "originalPrice": 9800,
+    "rating": 5,
+    "reviewCount": 31,
+    "badge": "Customer Favourite",
+    "images": [
+      "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Substantial, deeply comforting textural throw woven on traditional wooden looms in the Peruvian Andes. Fringed with generous hand-twisted tassels.",
+    "details": [
+      "70% Peruvian Baby Alpaca, 30% Merino Wool",
+      "Generous 180cm \u00d7 140cm dimensions",
+      "Dry clean only"
+    ],
+    "materials": "Peruvian Alpaca & Merino Wool",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Oatmeal & Cream",
+        "hex": "#DDD2C1"
+      },
+      {
+        "name": "Olive Charcoal",
+        "hex": "#5A5C55"
+      }
+    ],
+    "tags": [
+      "blanket",
+      "throw",
+      "boucle",
+      "living",
+      "alpaca"
+    ],
+    "collections": [
+      "bestsellers",
+      "signature",
+      "premium-picks"
+    ],
+    "isFeatured": true,
+    "isBestseller": true
+  },
+  {
+    "id": "liv-004",
+    "name": "Hinoki Wood & Amber Scented Candle",
+    "subtitle": "Slow-burning natural coconut wax in hand-thrown stoneware",
+    "category": "Contemporary Living",
+    "gender": "unisex",
+    "price": 980,
+    "originalPrice": 1400,
+    "rating": 4.9,
+    "reviewCount": 78,
+    "badge": "Under \u20b9999",
+    "images": [
+      "https://images.unsplash.com/photo-1603006905003-be475563bc59?q=80&w=1000&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616046229478-9901c5536a45?q=80&w=1000&auto=format&fit=crop"
+    ],
+    "description": "Evoking the mist-laden cedar forests of Kyoto. Top notes of Japanese Hinoki cypress, dry smoked cedarwood, and resinous amber. Poured into reusable matte ceramic pottery.",
+    "details": [
+      "100% Coconut Soy Wax blend with lead-free cotton wick",
+      "65+ hours clean burn time",
+      "Stoneware cup can be repurposed as an espresso cup after use"
+    ],
+    "materials": "Natural Coconut Wax, Stoneware Vessel",
+    "inStock": true,
+    "colors": [
+      {
+        "name": "Matte Sand",
+        "hex": "#D8C6AA"
+      }
+    ],
+    "tags": [
+      "candle",
+      "fragrance",
+      "living",
+      "under-999",
+      "hinoki"
+    ],
+    "collections": [
+      "under-999",
+      "everyday-essentials",
+      "bestsellers"
+    ],
+    "isFeatured": false,
+    "isBestseller": true
+  }
+]
