@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>AVELUNE — Comprehensive Project Documentation</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 900px; margin: 40px auto; padding: 0 24px; color: #222; line-height: 1.6; }
+h1, h2, h3, h4 { font-family: Georgia, serif; }
+code { font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace; }
+table { border-collapse: collapse; width: 100%; margin: 16px 0; font-size: 13px; }
+th, td { border: 1px solid #d0c8b8; padding: 10px 12px; text-align: left; }
+th { background-color: #f5f2eb; }
+tr:nth-child(even) { background-color: #faf8f5; }
+pre { background: #f8f6f0; padding: 14px; border: 1px solid #e2ddd3; border-radius: 6px; overflow-x: auto; font-size: 12px; }
+blockquote { border-left: 4px solid #8c8275; margin: 16px 0; padding: 8px 16px; background: #fbf9f5; }
+</style>
+</head>
+<body>
+<h1 style="color:#1a1a1a;border-bottom:2px solid #333;padding-bottom:6px;font-size:26px;">AVELUNE — AI-Powered Luxury E-Commerce Platform</h1>
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">Comprehensive Technical Project Documentation &amp; Architectural Blueprint</h2>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">1. Executive Summary &amp; Project Overview</h2>
+<p style="margin:8px 0;line-height:1.6;"><strong>AVELUNE</strong> is a production-grade, full-stack luxury e-commerce web platform engineered with a <strong>quiet luxury aesthetic</strong> and an <strong>AI-powered Style Assistant</strong>. The platform unites architectural restraint, tactile typography, and neutral earth-toned palettes with a high-performance, robust, and secure backend architecture.</p>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Key Highlights</h3>
+<ul>
+<li><strong>Full-Stack Separation of Concerns</strong>: High-performance React 18 + TypeScript storefront coupled with a secure Django 5 REST Framework backend.</li>
+<li><strong>Strict, Database-First AI Recommendations</strong>: Incorporates Google Gemini alongside a deterministic recommendation engine that treats user budget, category, and occasion as non-negotiable hard constraints.</li>
+<li><strong>Enterprise-Grade Authentication</strong>: Passwordless &amp; password-based login featuring 6-digit cryptographic Email OTP dispatched via Gmail SMTP, plus Google OAuth 2.0 single sign-on.</li>
+<li><strong>Cryptographic Payment Gateway</strong>: Real Razorpay checkout integration with server-side HMAC-SHA256 signature verification and zero client-side mock fallbacks.</li>
+<li><strong>Persistent Commerce State</strong>: Full database-backed cart, wishlist, orders, promo codes, and address book management.</li>
+<li><strong>Comprehensive Quality Assurance</strong>: 100% test passing rate across 50 Django automated unit tests and error-free TypeScript builds.</li>
+</ul>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">2. Complete Technology Stack</h2>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%;margin:16px 0;font-size:13px;border-color:#ccc;">
+<tr><th style="background:#f0ede6;font-weight:bold;text-align:left;">Layer</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Technology</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Version</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Purpose</th></tr>
+<tr><td><strong>Frontend UI</strong></td><td><strong>React.js</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">18.3.1</code></td><td>Component-driven declarative user interface</td></tr>
+<tr><td><strong>Language</strong></td><td><strong>TypeScript</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">5.7.2</code></td><td>Static typing, interface contracts, compile-time safety</td></tr>
+<tr><td><strong>Build Tool</strong></td><td><strong>Vite</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">5.4.21</code></td><td>Hot module replacement (HMR) and optimized rollup production bundles</td></tr>
+<tr><td><strong>Styling</strong></td><td><strong>Tailwind CSS</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">3.4.17</code></td><td>Utility-first styling with custom luxury color system</td></tr>
+<tr><td><strong>Animations</strong></td><td><strong>Framer Motion</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">11.18.2</code></td><td>Fluid drawer entrances, micro-interactions, page transitions</td></tr>
+<tr><td><strong>Icons</strong></td><td><strong>Lucide React</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">0.474.0</code></td><td>Minimalist luxury iconography</td></tr>
+<tr><td><strong>Backend Core</strong></td><td><strong>Django</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">5.2.18</code></td><td>Enterprise Python web framework, ORM, migrations, and admin portal</td></tr>
+<tr><td><strong>API Framework</strong></td><td><strong>Django REST Framework</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">3.18.3</code></td><td>Serializers, API views, authentication, pagination</td></tr>
+<tr><td><strong>Database</strong></td><td><strong>SQLite 3</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">3.x</code></td><td>Relational database engine for local and demo storage</td></tr>
+<tr><td><strong>Payments</strong></td><td><strong>Razorpay SDK</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">2.0.1</code></td><td>Order creation, payment capture, HMAC-SHA256 signature verification</td></tr>
+<tr><td><strong>AI / LLM</strong></td><td><strong>Google Gemini API</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">1.5/Flash</code></td><td>Contextual style summaries and consultant rationale</td></tr>
+<tr><td><strong>Email Delivery</strong></td><td><strong>Python SMTP / Gmail</strong></td><td>SSL/TLS</td><td>Dispatches 6-digit authentication and reset OTPs</td></tr>
+<tr><td><strong>Security / SSL</strong></td><td><strong>Certifi</strong></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">2026.10.23</code></td><td>Certified Mozilla CA bundle for cross-platform TLS handshake</td></tr>
+</table>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">3. High-Level System Architecture</h2>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+graph TD
+    subgraph Client [&quot;Client Layer (React 18 + TypeScript)&quot;]
+        UI[Storefront UI / Pages / Drawers]
+        Context[StoreContext / AuthContext / AssistantContext]
+        API_Client[Axios/Fetch API Service Layer]
+    end
+
+    subgraph Backend [&quot;Backend Layer (Django 5 REST Framework)&quot;]
+        Router[DRF URL Router]
+        AuthApp[apps.accounts: Email OTP &amp; OAuth]
+        CatalogApp[apps.catalog: Products &amp; Categories]
+        CartApp[apps.cart: Cart &amp; Wishlist]
+        OrderApp[apps.orders: Order Management]
+        PaymentApp[apps.payments: Razorpay Integration]
+        RecApp[apps.recommendations: AI Style Engine]
+    end
+
+    subgraph Storage [&quot;Database &amp; External Services&quot;]
+        DB[(SQLite3 Database)]
+        Gemini[Google Gemini API]
+        Razorpay[Razorpay Payment Gateway]
+        Gmail[Gmail SMTP Server]
+    end
+
+    UI --&gt; Context
+    Context --&gt; API_Client
+    API_Client --&gt;|HTTP / JSON / Token Auth| Router
+
+    Router --&gt; AuthApp
+    Router --&gt; CatalogApp
+    Router --&gt; CartApp
+    Router --&gt; OrderApp
+    Router --&gt; PaymentApp
+    Router --&gt; RecApp
+
+    AuthApp --&gt; DB
+    AuthApp --&gt;|TLS / Port 587| Gmail
+    CatalogApp --&gt; DB
+    CartApp --&gt; DB
+    OrderApp --&gt; DB
+    PaymentApp --&gt; DB
+    PaymentApp --&gt;|REST API &amp; Signature| Razorpay
+    RecApp --&gt; DB
+    RecApp --&gt;|AI Rationale| Gemini
+</pre>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">4. Repository &amp; Directory Structure</h2>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+ecommerce-project/
+├── .gitignore                      # Excludes venv, node_modules, .env, db.sqlite3
+├── README.md                       # Root documentation &amp; launch instructions
+├── PROJECT_DOCUMENTATION.md        # This comprehensive documentation file
+├── backend/
+│   ├── manage.py                   # Django management script
+│   ├── requirements.txt            # Python dependencies
+│   ├── .env.example                # Sanitized environment template
+│   ├── db.sqlite3                  # SQLite relational database
+│   ├── config/                     # Django core project configuration
+│   │   ├── settings.py             # Settings, CORS, SMTP, DRF configuration
+│   │   ├── urls.py                 # Master URL routing table
+│   │   ├── asgi.py                 # ASGI entry point
+│   │   └── wsgi.py                 # WSGI entry point
+│   ├── apps/                       # Modular Django domain apps
+│   │   ├── accounts/               # Custom Profile, EmailOTP, Auth Views
+│   │   ├── catalog/                # Product, Category, ProductImage models
+│   │   ├── cart/                   # Cart and CartItem models
+│   │   ├── wishlist/               # WishlistItem models
+│   │   ├── orders/                 # Order and OrderItem models
+│   │   ├── payments/               # Payment models, Razorpay signature service
+│   │   ├── promotions/             # Coupon &amp; promotion rules
+│   │   └── recommendations/        # Strict Intent Recommendation Service &amp; Gemini boundary
+│   └── tests/                      # Automated unit test suite (50 test cases)
+└── frontend/
+    ├── package.json                # Frontend dependencies and npm scripts
+    ├── tsconfig.json               # TypeScript compiler rules &amp; path aliases
+    ├── vite.config.ts              # Vite bundler configuration
+    ├── tailwind.config.js          # AVELUNE luxury color palette and font families
+    ├── src/
+    │   ├── main.tsx                # React DOM root entry point
+    │   ├── App.tsx                 # Route definitions and layout orchestration
+    │   ├── assets/                 # Brand assets, color tokens
+    │   ├── components/             # Reusable UI components
+    │   │   ├── Navbar.tsx          # Top navigation, category links, bag counter
+    │   │   ├── CartDrawer.tsx      # Slide-out interactive shopping bag
+    │   │   ├── WishlistDrawer.tsx  # Slide-out wishlist tray
+    │   │   ├── SearchOverlay.tsx   # Instant full-screen catalogue search
+    │   │   ├── QuickViewModal.tsx  # Product quick-preview modal
+    │   │   └── assistant/          # AI Style Assistant chat and recommendation cards
+    │   ├── context/                # Global React Context providers (Auth, Store, Assistant)
+    │   ├── pages/                  # Top-level screen views (Home, Collections, Cart, Checkout, Auth)
+    │   ├── sections/               # Modular homepage sections (Hero, Featured, Lookbook)
+    │   ├── services/               # API clients (api.ts, authService.ts, paymentService.ts)
+    │   ├── types/                  # TypeScript interface declarations
+    │   └── utils/                  # Currency formatting, filter helpers, smooth scroll
+</pre>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">5. Detailed Module Breakdown</h2>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">5.1 Authentication &amp; Security (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">apps.accounts</code>)</h3>
+<ul>
+<li><strong>Passwordless Email OTP</strong>:</li>
+</ul>
+<p style="margin:8px 0;line-height:1.6;">  - Generates a cryptographically secure 6-digit random code using Python&#x27;s <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">secrets</code> module (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">secrets.randbelow(900000) + 100000</code>).</p>
+<p style="margin:8px 0;line-height:1.6;">  - Stores only a salted <strong>SHA-256 hash</strong> of the OTP in the database (never plaintext).</p>
+<p style="margin:8px 0;line-height:1.6;">  - Enforces a strict <strong>5-minute expiration</strong> window.</p>
+<p style="margin:8px 0;line-height:1.6;">  - Rate limiting: <strong>45-second resend cooldown</strong> to prevent email spam.</p>
+<p style="margin:8px 0;line-height:1.6;">  - Maximum attempt enforcement: OTP is invalidated after 5 failed attempts or upon first successful use.</p>
+<p style="margin:8px 0;line-height:1.6;">  - Real email dispatch via Gmail SMTP (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">ayushkumar53467@gmail.com</code>) using TLS encryption.</p>
+<ul>
+<li><strong>Google OAuth 2.0</strong>:</li>
+</ul>
+<p style="margin:8px 0;line-height:1.6;">  - Endpoint <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/auth/google/url/</code> generates official Google OAuth login URL.</p>
+<p style="margin:8px 0;line-height:1.6;">  - Endpoint <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/auth/google/</code> verifies Google ID tokens server-side, validates audience/issuer claims, and auto-provisions or authenticates the user account.</p>
+<ul>
+<li><strong>Password Reset Flow</strong>:</li>
+</ul>
+<p style="margin:8px 0;line-height:1.6;">  - Secure two-step password reset via single-use email OTP. Prevents account enumeration by displaying standard confirmation.</p>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">5.2 Product Catalog &amp; Inventory (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">apps.catalog</code>)</h3>
+<ul>
+<li><strong>Models</strong>:</li>
+</ul>
+<p style="margin:8px 0;line-height:1.6;">  - <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">Category</code>: Categorization with audience tags (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">men</code>, <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">women</code>, <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">kids</code>, <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">unisex</code>), slugs, and hero imagery.</p>
+<p style="margin:8px 0;line-height:1.6;">  - <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">Product</code>: Complete SKU data including price, original price, rating, review count, stock quantity, tags, and JSON bullet points.</p>
+<p style="margin:8px 0;line-height:1.6;">  - <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">ProductImage</code>: High-resolution gallery asset URLs with display ordering.</p>
+<ul>
+<li><strong>Seeding</strong>:</li>
+</ul>
+<p style="margin:8px 0;line-height:1.6;">  - Pre-seeded with <strong>46 luxury products</strong> across 21 categories via <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">backend/apps/catalog/fixtures/initial_catalog.json</code>.</p>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">5.3 Shopping Cart &amp; Wishlist (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">apps.cart</code> &amp; <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">apps.wishlist</code>)</h3>
+<ul>
+<li><strong>Cart Architecture</strong>:</li>
+</ul>
+<p style="margin:8px 0;line-height:1.6;">  - Supports both authenticated user sessions and guest sessions.</p>
+<p style="margin:8px 0;line-height:1.6;">  - Validates available stock quantity before item additions or quantity increments.</p>
+<p style="margin:8px 0;line-height:1.6;">  - Real-time calculation of subtotal, applicable taxes, shipping thresholds, and coupon discounts.</p>
+<ul>
+<li><strong>Wishlist Architecture</strong>:</li>
+</ul>
+<p style="margin:8px 0;line-height:1.6;">  - Instant toggle between bag and wishlist with zero screen reloads.</p>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">5.4 Checkout &amp; Razorpay Payments (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">apps.payments</code> &amp; <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">apps.orders</code>)</h3>
+<ul>
+<li><strong>Cryptographic Payment Lifecycle</strong>:</li>
+</ul>
+<p style="margin:8px 0;line-height:1.6;">  1. Frontend initiates <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/payments/create-order/</code> with line items, shipping address, and delivery notes.</p>
+<p style="margin:8px 0;line-height:1.6;">  2. Backend validates product prices and inventory, generates an internal <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">Order</code>, and calls Razorpay API to generate a <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">razorpay_order_id</code>.</p>
+<p style="margin:8px 0;line-height:1.6;">  3. Frontend opens official <strong>Razorpay Checkout modal</strong> in Test Mode.</p>
+<p style="margin:8px 0;line-height:1.6;">  4. Upon successful payment on the client, Razorpay returns <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">razorpay_order_id</code>, <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">razorpay_payment_id</code>, and <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">razorpay_signature</code>.</p>
+<p style="margin:8px 0;line-height:1.6;">  5. Frontend posts credentials to <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/payments/verify/</code>.</p>
+<p style="margin:8px 0;line-height:1.6;">  6. Backend calculates HMAC-SHA256 signature using <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">RAZORPAY_KEY_SECRET</code>.</p>
+<p style="margin:8px 0;line-height:1.6;">  7. If and only if the cryptographic signature matches:</p>
+<p style="margin:8px 0;line-height:1.6;">     - The <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">Payment</code> status transitions to <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">captured</code>.</p>
+<p style="margin:8px 0;line-height:1.6;">     - The <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">Order</code> status transitions to <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">paid</code>.</p>
+<p style="margin:8px 0;line-height:1.6;">     - Inventory stock counts are decremented atomically.</p>
+<p style="margin:8px 0;line-height:1.6;">     - A confirmation receipt is issued.</p>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">5.5 AI Style Assistant &amp; Recommendation Engine (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">apps.recommendations</code>)</h3>
+<p style="margin:8px 0;line-height:1.6;">The AVELUNE AI Style Assistant is built on a <strong>Database-First Strict Intent Matching Architecture</strong>:</p>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+flowchart TD
+    UserQuery[&quot;User Input: Gender, Occasion, Budget, Styles&quot;] --&gt; Step1[&quot;1. Parameter Normalization &amp; Validation&quot;]
+    Step1 --&gt; Step2[&quot;2. Database-First Candidate Extraction (SQLite)&quot;]
+    Step2 --&gt; Step3[&quot;3. Strict Eligibility Gatekeeper (is_eligible)&quot;]
+
+    subgraph HardConstraints [&quot;Hard Constraints (Strict Exclusion)&quot;]
+        C1[&quot;Gender Isolation (Men != Women != Kids)&quot;]
+        C2[&quot;Hard Budget Limit (Price &lt;= Max Budget)&quot;]
+        C3[&quot;Living/Homeware Exclusion (No Candles/Blankets)&quot;]
+        C4[&quot;Unrequested Accessory Exclusion (No Bags/Watches)&quot;]
+        C5[&quot;In-Stock &amp; Active Product Check&quot;]
+    end
+
+    Step3 --&gt; HardConstraints
+    HardConstraints --&gt; Step4{&quot;Eligible Candidates Found?&quot;}
+    Step4 -- &quot;No (0 items)&quot; --&gt; Step5A[&quot;Honest Zero-Match Diagnostic: Inform user of budget floor&quot;]
+    Step4 -- &quot;Yes (&gt;0 items)&quot; --&gt; Step5B[&quot;Multi-Factor Soft Preference Scoring &amp; Ranking&quot;]
+    Step5B --&gt; Step6[&quot;Optional Gemini AI Rationale Generation&quot;]
+    Step6 --&gt; Step7[&quot;Output Verification Gate: Ensure zero invented product IDs&quot;]
+    Step7 --&gt; Response[&quot;Return Validated Products to Frontend&quot;]
+    Step5A --&gt; Response
+</pre>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">6. Database Entity-Relationship (ER) Diagram</h2>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+erDiagram
+    User ||--o| Profile : &quot;has&quot;
+    User ||--o{ Order : &quot;places&quot;
+    User ||--o{ Cart : &quot;owns&quot;
+    User ||--o{ WishlistItem : &quot;saves&quot;
+    
+    Category ||--o{ Product : &quot;contains&quot;
+    Product ||--o{ ProductImage : &quot;has&quot;
+    Product ||--o{ CartItem : &quot;referenced_in&quot;
+    Product ||--o{ OrderItem : &quot;ordered_as&quot;
+    
+    Cart ||--o{ CartItem : &quot;holds&quot;
+    Order ||--o{ OrderItem : &quot;contains&quot;
+    Order ||--o{ Payment : &quot;billed_by&quot;
+    
+    EmailOTP {
+        string email
+        string otp_hash
+        string purpose
+        datetime expires_at
+        int attempts
+        boolean is_used
+    }
+    
+    Product {
+        string id PK
+        string name
+        decimal price
+        decimal original_price
+        string gender
+        int stock_quantity
+        boolean in_stock
+        json tags
+    }
+
+    Order {
+        string id PK
+        string order_number
+        decimal total_amount
+        string status
+        string shipping_address
+    }
+
+    Payment {
+        string id PK
+        string razorpay_order_id
+        string razorpay_payment_id
+        string razorpay_signature
+        string status
+        decimal amount
+    }
+</pre>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">7. REST API Endpoints Specification</h2>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Authentication (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/auth/</code>)</h3>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%;margin:16px 0;font-size:13px;border-color:#ccc;">
+<tr><th style="background:#f0ede6;font-weight:bold;text-align:left;">Endpoint</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Method</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Description</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Payload Sample</th></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/send-otp/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Dispatches 6-digit email OTP</td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">{&quot;email&quot;: &quot;user@example.com&quot;, &quot;purpose&quot;: &quot;login&quot;}</code></td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/verify-otp/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Verifies OTP &amp; returns Auth Token</td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">{&quot;email&quot;: &quot;user@example.com&quot;, &quot;otp&quot;: &quot;123456&quot;}</code></td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/login/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Standard email + password login</td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">{&quot;email&quot;: &quot;user@example.com&quot;, &quot;password&quot;: &quot;...&quot;}</code></td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/register/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>New user registration</td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">{&quot;fullName&quot;: &quot;...&quot;, &quot;email&quot;: &quot;...&quot;, &quot;password&quot;: &quot;...&quot;}</code></td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/google/url/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">GET</code></td><td>Returns Google OAuth consent URL</td><td><em>None</em></td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/google/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Validates Google OAuth callback</td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">{&quot;code&quot;: &quot;...&quot;}</code> or <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">{&quot;credential&quot;: &quot;...&quot;}</code></td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/password-reset-otp/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Dispatches password reset code</td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">{&quot;email&quot;: &quot;user@example.com&quot;}</code></td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/password-reset-confirm/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Resets password with OTP</td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">{&quot;email&quot;: &quot;...&quot;, &quot;otp&quot;: &quot;...&quot;, &quot;newPassword&quot;: &quot;...&quot;}</code></td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/me/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">GET</code></td><td>Fetches active authenticated user</td><td><em>Requires Auth Token</em></td></tr>
+</table>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Catalog &amp; Products (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/products/</code> &amp; <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/categories/</code>)</h3>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%;margin:16px 0;font-size:13px;border-color:#ccc;">
+<tr><th style="background:#f0ede6;font-weight:bold;text-align:left;">Endpoint</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Method</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Description</th></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/products/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">GET</code></td><td>Filter products by gender, category, price, search query</td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/products/&lt;id&gt;/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">GET</code></td><td>Retrieves full product details, specs, and gallery</td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/categories/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">GET</code></td><td>Lists all 21 active categories</td></tr>
+</table>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Payments &amp; Checkout (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/payments/</code>)</h3>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%;margin:16px 0;font-size:13px;border-color:#ccc;">
+<tr><th style="background:#f0ede6;font-weight:bold;text-align:left;">Endpoint</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Method</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Description</th></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/create-order/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Generates Django Order and Razorpay Order</td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/verify/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Verifies Razorpay HMAC-SHA256 signature</td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/status/&lt;order_id&gt;/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">GET</code></td><td>Checks real-time order status</td></tr>
+</table>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Recommendations (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/api/recommendations/</code>)</h3>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%;margin:16px 0;font-size:13px;border-color:#ccc;">
+<tr><th style="background:#f0ede6;font-weight:bold;text-align:left;">Endpoint</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Method</th><th style="background:#f0ede6;font-weight:bold;text-align:left;">Description</th></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Runs strict intent recommendation engine</td></tr>
+<tr><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">/quick/</code></td><td><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">POST</code></td><td>Fast filter-based recommendations</td></tr>
+</table>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">8. Automated Testing &amp; Verification Suite</h2>
+<p style="margin:8px 0;line-height:1.6;">The repository contains an automated test suite verifying every domain flow:</p>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+cd ecommerce-project/backend
+./venv/bin/python manage.py test tests
+</pre>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Test Suite Execution Output</h3>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+Found 50 test(s).
+Creating test database for alias &#x27;default&#x27;...
+System check identified no issues (0 silenced).
+..................................................
+----------------------------------------------------------------------
+Ran 50 tests in 2.185s
+
+OK
+Destroying test database for alias &#x27;default&#x27;...
+</pre>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Coverage by Domain</h3>
+<p style="margin:8px 0;line-height:1.6;">1. <strong>Authentication Tests (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">test_auth.py</code>)</strong>: Registration, login, OTP dispatch, OTP cooldown, invalid OTP rejection, password reset.</p>
+<p style="margin:8px 0;line-height:1.6;">2. <strong>Catalog Tests (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">test_catalog.py</code>)</strong>: Category filtering, gender isolation, price sorting, search indexing.</p>
+<p style="margin:8px 0;line-height:1.6;">3. <strong>Cart &amp; Wishlist Tests (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">test_cart_wishlist.py</code>)</strong>: Add/remove items, quantity limits, persistent totals.</p>
+<p style="margin:8px 0;line-height:1.6;">4. <strong>Order Management Tests (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">test_orders.py</code>)</strong>: Order creation, stock reservation, status transitions.</p>
+<p style="margin:8px 0;line-height:1.6;">5. <strong>Payment Tests (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">test_payments.py</code>)</strong>: Razorpay order creation, valid signature verification, forged signature rejection.</p>
+<p style="margin:8px 0;line-height:1.6;">6. <strong>Promotion Tests (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">test_promotions.py</code>)</strong>: Coupon validation, minimum spend thresholds, discount subtraction.</p>
+<p style="margin:8px 0;line-height:1.6;">7. <strong>Strict Recommendation Tests (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">test_recommendations_strict.py</code>)</strong>: 14 tests verifying budget ceilings, occasion mapping, accessory isolation, and honest zero-match diagnostics.</p>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">9. Local Setup &amp; Execution Guide</h2>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Prerequisites</h3>
+<ul>
+<li>Python 3.10+ (macOS/Linux/Windows)</li>
+<li>Node.js 18+ and npm 9+</li>
+<li>Git</li>
+</ul>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Step 1: Clone Repository</h3>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+git clone https://github.com/Ayushsinha132007/Avelune.git
+cd Avelune
+</pre>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Step 2: Backend Configuration</h3>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+cd backend
+python3 -m venv venv
+source venv/bin/activate       # On Windows: venv\Scripts\activate
+pip install -r requirements.txt
+cp .env.example .env
+# Fill in SMTP credentials and Razorpay keys in .env
+python manage.py migrate
+python manage.py loaddata apps/catalog/fixtures/initial_catalog.json
+python manage.py runserver 127.0.0.1:8000
+</pre>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Step 3: Frontend Configuration</h3>
+<pre style="background:#f4f4f4;padding:12px;border:1px solid #ddd;border-radius:4px;font-family:monospace;">
+# In a new terminal tab
+cd frontend
+npm install
+npm run dev
+</pre>
+<p style="margin:8px 0;line-height:1.6;">Open <strong><code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">http://localhost:5173</code></strong> in your browser.</p>
+<hr style="border:none;border-top:1px solid #ddd;margin:20px 0;">
+<h2 style="color:#2a2a2a;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:24px;font-size:20px;">10. Frequently Asked Questions &amp; Viva / Interview Guide</h2>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Q1: Why did you choose React + Django REST Framework over full Next.js?</h3>
+<blockquote style="background:#fbf9f5;border-left:4px solid #8c8275;padding:8px 16px;margin:12px 0;color:#444;"><strong>Answer</strong>: React 18 + Vite offers ultra-fast client-side rendering and tactile interactive micro-animations (Framer Motion) suited for luxury retail. Django provides an enterprise-ready ORM, built-in admin dashboard, secure session &amp; token authentication, atomic database transactions, and cryptographic libraries that ensure payment and OTP integrity.</blockquote>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Q2: How is the OTP security implemented to prevent attacks?</h3>
+<blockquote style="background:#fbf9f5;border-left:4px solid #8c8275;padding:8px 16px;margin:12px 0;color:#444;"><strong>Answer</strong>: The OTP system incorporates 5 defensive layers:</blockquote>
+<blockquote style="background:#fbf9f5;border-left:4px solid #8c8275;padding:8px 16px;margin:12px 0;color:#444;">1. Cryptographically secure random generation using Python&#x27;s <code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">secrets</code> module.</blockquote>
+<blockquote style="background:#fbf9f5;border-left:4px solid #8c8275;padding:8px 16px;margin:12px 0;color:#444;">2. One-way SHA-256 salted hashing — raw OTPs are never stored in the database.</blockquote>
+<blockquote style="background:#fbf9f5;border-left:4px solid #8c8275;padding:8px 16px;margin:12px 0;color:#444;">3. Strict 5-minute time-to-live (TTL).</blockquote>
+<blockquote style="background:#fbf9f5;border-left:4px solid #8c8275;padding:8px 16px;margin:12px 0;color:#444;">4. Rate-limiting with a 45-second resend cooldown to stop email bombing.</blockquote>
+<blockquote style="background:#fbf9f5;border-left:4px solid #8c8275;padding:8px 16px;margin:12px 0;color:#444;">5. Maximum 5 retry attempts before code invalidation to defeat brute-force enumeration.</blockquote>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Q3: How do you prevent payment tampering in Razorpay?</h3>
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse:collapse;width:100%;margin:16px 0;font-size:13px;border-color:#ccc;">
+<tr></tr>
+</table>
+<h3 style="color:#3a3a3a;margin-top:18px;font-size:16px;">Q4: How does the AI recommendation engine avoid hallucinating non-existent products?</h3>
+<blockquote style="background:#fbf9f5;border-left:4px solid #8c8275;padding:8px 16px;margin:12px 0;color:#444;"><strong>Answer</strong>: It follows a <strong>database-first candidate extraction pipeline</strong>. Real SQLite products are first filtered through a strict eligibility gatekeeper (<code style="background:#f0ede6;padding:2px 5px;border-radius:3px;font-family:monospace;font-size:12px;">is_eligible</code>). Only verified database product IDs are presented to the AI. A post-validation boundary ensures that if the LLM mentions an unrecognized product ID or a product outside the budget, it is discarded immediately.</blockquote>
+</body>
+</html>
