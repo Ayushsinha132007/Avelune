@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowUpRight, ArrowRight } from 'lucide-react';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 
 interface PortalItem {
   id: string;
@@ -68,6 +69,9 @@ const MAISON_PORTALS: PortalItem[] = [
 ];
 
 export const MaisonPortals: React.FC = () => {
+  const { requireAuth } = useRequireAuth();
+  const navigate = useNavigate();
+
   return (
     <section className="py-24 sm:py-32 bg-[#F8F6F1] px-4 sm:px-6 lg:px-12 border-b border-[#E4DED4]">
       <div className="max-w-7xl mx-auto">
@@ -99,9 +103,10 @@ export const MaisonPortals: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-50px' }}
               transition={{ duration: 0.7, delay: index * 0.12, ease: [0.16, 1, 0.3, 1] }}
-              className={`group relative overflow-hidden bg-[#EFE9DF] rounded-xs border border-[#E4DED4] ${portal.colSpan}`}
+              onClick={() => requireAuth(() => navigate(portal.path), portal.path)}
+              className={`group relative overflow-hidden bg-[#EFE9DF] rounded-xs border border-[#E4DED4] cursor-pointer ${portal.colSpan}`}
             >
-              <Link to={portal.path} className="block relative h-full">
+              <div className="block relative h-full">
                 {/* Image Canvas with Subtle Luxury Zoom */}
                 <div className="relative aspect-[16/11] sm:aspect-[16/9] lg:aspect-[16/11] overflow-hidden">
                   <img
@@ -145,7 +150,7 @@ export const MaisonPortals: React.FC = () => {
                     </div>
                   </div>
                 </div>
-              </Link>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -160,16 +165,17 @@ export const MaisonPortals: React.FC = () => {
               Looking to filter all 46 pieces by price, fabric, occasion, and size simultaneously?
             </p>
           </div>
-          <Link
-            to="/collections"
+          <button
+            onClick={() => requireAuth(() => navigate('/collections'), '/collections')}
             className="px-6 py-3 bg-[#242522] text-[#F8F6F1] text-xs uppercase tracking-widest-luxury font-medium hover:bg-[#3A3C36] transition-colors whitespace-nowrap inline-flex items-center gap-2.5"
           >
             <span>Open Complete Filter Catalogue</span>
             <ArrowUpRight className="w-4 h-4" />
-          </Link>
+          </button>
         </div>
 
       </div>
     </section>
   );
 };
+

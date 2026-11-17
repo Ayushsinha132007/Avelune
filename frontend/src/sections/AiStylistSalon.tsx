@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles, ArrowRight, Bot, Compass, ShieldCheck, Shirt } from 'lucide-react';
 import { useAssistant } from '../hooks/useAssistant';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 
 interface StylistPreset {
   id: string;
@@ -49,22 +50,35 @@ const STYLIST_PRESETS: StylistPreset[] = [
 
 export const AiStylistSalon: React.FC = () => {
   const { openAssistant, handleUserTextMessage } = useAssistant();
+  const { requireAuth } = useRequireAuth();
   const [customInput, setCustomInput] = useState('');
 
   const handlePresetClick = (preset: StylistPreset) => {
-    openAssistant(preset.prompt);
-    handleUserTextMessage(preset.prompt);
+    requireAuth(
+      () => {
+        openAssistant(preset.prompt);
+        handleUserTextMessage(preset.prompt);
+      },
+      undefined,
+      'Please sign in to consult your personal AI stylist.'
+    );
   };
 
   const handleCustomSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!customInput.trim()) {
-      openAssistant();
-      return;
-    }
-    openAssistant(customInput.trim());
-    handleUserTextMessage(customInput.trim());
-    setCustomInput('');
+    requireAuth(
+      () => {
+        if (!customInput.trim()) {
+          openAssistant();
+          return;
+        }
+        openAssistant(customInput.trim());
+        handleUserTextMessage(customInput.trim());
+        setCustomInput('');
+      },
+      undefined,
+      'Please sign in to consult your personal AI stylist.'
+    );
   };
 
   return (
@@ -161,3 +175,4 @@ export const AiStylistSalon: React.FC = () => {
     </section>
   );
 };
+

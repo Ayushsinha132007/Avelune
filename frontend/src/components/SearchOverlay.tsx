@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, ArrowRight, Eye, Plus } from 'lucide-react';
 import { useStore } from '../hooks/useStore';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { MOCK_PRODUCTS } from '../data/products';
 import { catalogApi } from '../services/api';
 import { formatINR } from '../utils/currency';
@@ -20,6 +21,7 @@ const POPULAR_SEARCHES = [
 
 export const SearchOverlay: React.FC = () => {
   const { isSearchOpen, closeSearch, searchQuery, setSearchQuery, openQuickView, addToCart } = useStore();
+  const { requireAuth } = useRequireAuth();
   const inputRef = useRef<HTMLInputElement>(null);
   const [productsPool, setProductsPool] = useState<Product[]>(MOCK_PRODUCTS);
 
@@ -158,8 +160,17 @@ export const SearchOverlay: React.FC = () => {
                         key={product.id}
                         className="flex gap-3 p-3 bg-white border border-[#E4DED4]/80 hover:border-[#D8C6AA] transition-colors rounded-sm group cursor-pointer"
                         onClick={() => {
-                          closeSearch();
-                          openQuickView(product);
+                          requireAuth(
+                            () => {
+                              closeSearch();
+                              openQuickView(product);
+                            },
+                            undefined,
+                            'Please sign in to inspect atelier piece details.'
+                          );
+                          if (!requireAuth(undefined)) {
+                            closeSearch();
+                          }
                         }}
                       >
                         <img
@@ -184,8 +195,17 @@ export const SearchOverlay: React.FC = () => {
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                closeSearch();
-                                openQuickView(product);
+                                requireAuth(
+                                  () => {
+                                    closeSearch();
+                                    openQuickView(product);
+                                  },
+                                  undefined,
+                                  'Please sign in to inspect atelier piece details.'
+                                );
+                                if (!requireAuth(undefined)) {
+                                  closeSearch();
+                                }
                               }}
                               className="text-[11px] text-[#777B63] hover:text-[#242522] flex items-center gap-1"
                             >
@@ -196,7 +216,16 @@ export const SearchOverlay: React.FC = () => {
                             <button
                               onClick={(e) => {
                                 e.stopPropagation();
-                                addToCart(product);
+                                requireAuth(
+                                  () => {
+                                    addToCart(product);
+                                  },
+                                  '/cart',
+                                  'Please sign in to add pieces to your shopping bag.'
+                                );
+                                if (!requireAuth(undefined, '/cart')) {
+                                  closeSearch();
+                                }
                               }}
                               className="text-[11px] text-[#242522] hover:text-[#777B63] font-medium flex items-center gap-1"
                             >

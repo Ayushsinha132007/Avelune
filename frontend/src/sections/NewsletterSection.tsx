@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Check, ArrowRight } from 'lucide-react';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 
 export const NewsletterSection: React.FC = () => {
+  const { requireAuth } = useRequireAuth();
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
   const [errorMessage, setErrorMessage] = useState('');
@@ -13,6 +15,9 @@ export const NewsletterSection: React.FC = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!requireAuth(undefined, '/#newsletter-section', 'Please sign in to join our private atelier ledger.')) {
+      return;
+    }
     if (!email.trim()) {
       setStatus('error');
       setErrorMessage('Please enter your email address.');

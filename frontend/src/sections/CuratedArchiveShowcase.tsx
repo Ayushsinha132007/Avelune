@@ -1,12 +1,16 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, ArrowUpRight, Sparkles } from 'lucide-react';
 import { ProductCard } from '../components/ProductCard';
 import { MOCK_PRODUCTS } from '../data/products';
 import { Product } from '../types';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 
 export const CuratedArchiveShowcase: React.FC = () => {
+  const { requireAuth } = useRequireAuth();
+  const navigate = useNavigate();
+
   // Curate 4 iconic masterpieces from different categories
   const featuredIds = ['men-015', 'wom-001', 'men-016', 'sig-001'];
   const iconicProducts: Product[] = featuredIds
@@ -28,13 +32,13 @@ export const CuratedArchiveShowcase: React.FC = () => {
             </h2>
           </div>
           <div className="mt-4 sm:mt-0 flex items-center gap-4">
-            <Link
-              to="/collections"
+            <button
+              onClick={() => requireAuth(() => navigate('/collections'), '/collections')}
               className="text-xs uppercase tracking-widest-luxury font-medium text-[#242522] hover:text-[#777B63] inline-flex items-center gap-1.5 transition-colors"
             >
               <span>View All 46 Pieces in Catalogue</span>
               <ArrowRight className="w-3.5 h-3.5" />
-            </Link>
+            </button>
           </div>
         </div>
 
@@ -68,16 +72,17 @@ export const CuratedArchiveShowcase: React.FC = () => {
             </p>
           </div>
 
-          <Link
-            to="/collections"
+          <button
+            onClick={() => requireAuth(() => navigate('/collections'), '/collections')}
             className="px-8 py-3.5 bg-[#F8F6F1] text-[#181916] text-xs uppercase tracking-widest-luxury font-medium hover:bg-[#D8C6AA] transition-colors whitespace-nowrap inline-flex items-center gap-2"
           >
             <span>Launch Catalogue Dashboard</span>
             <ArrowUpRight className="w-4 h-4" />
-          </Link>
+          </button>
         </div>
 
       </div>
     </section>
   );
 };
+

@@ -2,9 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Sparkles } from 'lucide-react';
 import { useAssistant } from '../../context/AssistantContext';
+import { useRequireAuth } from '../../hooks/useRequireAuth';
 
 export const ShoppingAssistantButton: React.FC = () => {
   const { toggleAssistant, isOpen } = useAssistant();
+  const { requireAuth } = useRequireAuth();
 
   // Hide the floating button while assistant drawer is open
   if (isOpen) return null;
@@ -13,7 +15,13 @@ export const ShoppingAssistantButton: React.FC = () => {
     <div className="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40">
       <motion.button
         type="button"
-        onClick={toggleAssistant}
+        onClick={() =>
+          requireAuth(
+            toggleAssistant,
+            undefined,
+            'Please sign in to consult your personal AI Style Consultant.'
+          )
+        }
         whileHover={{ scale: 1.03 }}
         whileTap={{ scale: 0.97 }}
         aria-label="Open Avelune Style Assistant"

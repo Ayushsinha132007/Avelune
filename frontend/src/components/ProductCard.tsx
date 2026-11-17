@@ -4,6 +4,7 @@ import { Heart, Plus, Eye, Check, Sparkles } from 'lucide-react';
 import { Product } from '../types';
 import { formatINR } from '../utils/currency';
 import { useStore } from '../hooks/useStore';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 
 interface ProductCardProps {
   product: Product;
@@ -18,6 +19,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
   className = '',
 }) => {
   const { addToCart, toggleWishlist, isInWishlist, openQuickView } = useStore();
+  const { requireAuth } = useRequireAuth();
   const [isHovered, setIsHovered] = useState(false);
   const [justAdded, setJustAdded] = useState(false);
 
@@ -31,14 +33,26 @@ export const ProductCard: React.FC<ProductCardProps> = ({
 
   const handleQuickAdd = (e: React.MouseEvent) => {
     e.stopPropagation();
-    addToCart(product);
-    setJustAdded(true);
-    setTimeout(() => setJustAdded(false), 1800);
+    requireAuth(
+      () => {
+        addToCart(product);
+        setJustAdded(true);
+        setTimeout(() => setJustAdded(false), 1800);
+      },
+      '/cart',
+      'Please sign in to add pieces to your shopping bag.'
+    );
   };
 
   const handleWishlistClick = (e: React.MouseEvent) => {
     e.stopPropagation();
-    toggleWishlist(product);
+    requireAuth(
+      () => {
+        toggleWishlist(product);
+      },
+      undefined,
+      'Please sign in to save pieces to your wishlist.'
+    );
   };
 
   return (
@@ -46,7 +60,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       className={`group relative flex flex-col bg-white border border-[#E4DED4]/60 hover:border-[#D8C6AA] transition-all duration-500 rounded-sm overflow-hidden ${className}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      onClick={() => openQuickView(product)}
+      onClick={() =>
+        requireAuth(
+          () => openQuickView(product),
+          undefined,
+          'Please sign in to inspect atelier piece details.'
+        )
+      }
     >
       {/* Image Container with 4:5 Aspect Ratio */}
       <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#EFE9DF]/40 cursor-pointer">

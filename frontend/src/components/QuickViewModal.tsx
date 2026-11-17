@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, Heart, Plus, Minus, ShoppingBag, Check, Shield } from 'lucide-react';
 import { useStore } from '../hooks/useStore';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { formatINR } from '../utils/currency';
 
 export const QuickViewModal: React.FC = () => {
@@ -12,6 +13,7 @@ export const QuickViewModal: React.FC = () => {
     toggleWishlist,
     isInWishlist,
   } = useStore();
+  const { requireAuth } = useRequireAuth();
 
   const [activeImageIndex, setActiveImageIndex] = useState(0);
   const [selectedSize, setSelectedSize] = useState<string | undefined>();
@@ -33,12 +35,34 @@ export const QuickViewModal: React.FC = () => {
   const isFavorited = isInWishlist(product.id);
 
   const handleAddToCart = () => {
-    addToCart(product, quantity, selectedSize, selectedColor);
-    setIsAdded(true);
-    setTimeout(() => {
-      setIsAdded(false);
+    requireAuth(
+      () => {
+        addToCart(product, quantity, selectedSize, selectedColor);
+        setIsAdded(true);
+        setTimeout(() => {
+          setIsAdded(false);
+          closeQuickView();
+        }, 900);
+      },
+      '/cart',
+      'Please sign in to add pieces to your shopping bag.'
+    );
+    if (!requireAuth(undefined, '/cart')) {
       closeQuickView();
-    }, 900);
+    }
+  };
+
+  const handleWishlistToggle = () => {
+    requireAuth(
+      () => {
+        toggleWishlist(product);
+      },
+      undefined,
+      'Please sign in to save pieces to your wishlist.'
+    );
+    if (!requireAuth(undefined)) {
+      closeQuickView();
+    }
   };
 
   return (
@@ -258,7 +282,7 @@ export const QuickViewModal: React.FC = () => {
 
                     {/* Wishlist toggle */}
                     <button
-                      onClick={() => toggleWishlist(product)}
+                      onClick={handleWishlistToggle}
                       className={`p-3 border border-[#E4DED4] rounded-none transition-colors ${
                         isFavorited
                           ? 'bg-[#242522] text-[#D8C6AA]'

@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, X } from 'lucide-react';
-import { scrollToSection } from '../utils/scroll';
+import { useNavigate } from 'react-router-dom';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 
 const ANNOUNCEMENTS = [
   'Complimentary shipping on all domestic orders above ₹1,999',
@@ -12,6 +13,8 @@ const ANNOUNCEMENTS = [
 export const AnnouncementBar: React.FC = () => {
   const [index, setIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
+  const { requireAuth } = useRequireAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -30,7 +33,13 @@ export const AnnouncementBar: React.FC = () => {
 
         {/* Center message carousel */}
         <div
-          onClick={() => scrollToSection('new-arrivals', 80)}
+          onClick={() =>
+            requireAuth(
+              () => navigate('/collections'),
+              '/collections',
+              'Please sign in to view the live signature collection.'
+            )
+          }
           className="flex-1 flex items-center justify-center overflow-hidden h-5 cursor-pointer group"
           title="Click to view new arrivals"
         >

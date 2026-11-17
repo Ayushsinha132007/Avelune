@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, X, ShoppingBag, ArrowRight, Check } from 'lucide-react';
 import { useStore } from '../hooks/useStore';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { formatINR } from '../utils/currency';
 
 interface Hotspot {
@@ -52,38 +53,12 @@ export const ShopTheLookSection: React.FC = () => {
   const [activeHotspotId, setActiveHotspotId] = useState<string | null>('spot-shirt');
   const [addedItemIds, setAddedItemIds] = useState<Set<string>>(new Set());
   const { addToCart, showToast, openCart } = useStore();
+  const { requireAuth } = useRequireAuth();
 
   const activeSpot = LOOK_HOTSPOTS.find((s) => s.id === activeHotspotId) || LOOK_HOTSPOTS[0];
 
   const handleQuickAdd = (spot: Hotspot) => {
-    addToCart({
-      id: spot.productId,
-      name: spot.name,
-      subtitle: spot.category,
-      price: spot.price,
-      images: [spot.image],
-      category: spot.category,
-      gender: 'men',
-      rating: 4.9,
-      reviewCount: 38,
-      inStock: true,
-      stockQuantity: 25,
-      description: 'Part of the AVELUNE Autumn Lookbook styling.',
-      details: ['Dry clean only', 'Ethically tailored', 'Signature hardware'],
-      materials: 'Natural Luxury Fiber',
-      tags: ['evening', 'party', 'tailored'],
-    } as any);
-
-    setAddedItemIds((prev) => new Set(prev).add(spot.id));
-    showToast({
-      title: 'Added to Atelier Bag',
-      description: `${spot.name} has been added to your shopping bag.`,
-      type: 'info',
-    });
-  };
-
-  const handleAddEntireLook = () => {
-    LOOK_HOTSPOTS.forEach((spot) => {
+    requireAuth(() => {
       addToCart({
         id: spot.productId,
         name: spot.name,
@@ -96,20 +71,51 @@ export const ShopTheLookSection: React.FC = () => {
         reviewCount: 38,
         inStock: true,
         stockQuantity: 25,
-        description: 'Complete Look Ensemble styling.',
-        details: ['Tailored set'],
+        description: 'Part of the AVELUNE Autumn Lookbook styling.',
+        details: ['Dry clean only', 'Ethically tailored', 'Signature hardware'],
         materials: 'Natural Luxury Fiber',
-        tags: ['lookbook', 'ensemble'],
+        tags: ['evening', 'party', 'tailored'],
       } as any);
-    });
 
-    setAddedItemIds(new Set(LOOK_HOTSPOTS.map((s) => s.id)));
-    showToast({
-      title: 'Complete Ensemble Added',
-      description: 'All 3 pieces from Look 01 have been placed in your bag.',
-      type: 'info',
-    });
-    openCart();
+      setAddedItemIds((prev) => new Set(prev).add(spot.id));
+      showToast({
+        title: 'Added to Atelier Bag',
+        description: `${spot.name} has been added to your shopping bag.`,
+        type: 'info',
+      });
+    }, '/cart', 'Please sign in to add pieces to your shopping bag.');
+  };
+
+  const handleAddEntireLook = () => {
+    requireAuth(() => {
+      LOOK_HOTSPOTS.forEach((spot) => {
+        addToCart({
+          id: spot.productId,
+          name: spot.name,
+          subtitle: spot.category,
+          price: spot.price,
+          images: [spot.image],
+          category: spot.category,
+          gender: 'men',
+          rating: 4.9,
+          reviewCount: 38,
+          inStock: true,
+          stockQuantity: 25,
+          description: 'Complete Look Ensemble styling.',
+          details: ['Tailored set'],
+          materials: 'Natural Luxury Fiber',
+          tags: ['lookbook', 'ensemble'],
+        } as any);
+      });
+
+      setAddedItemIds(new Set(LOOK_HOTSPOTS.map((s) => s.id)));
+      showToast({
+        title: 'Complete Ensemble Added',
+        description: 'All 3 pieces from Look 01 have been placed in your bag.',
+        type: 'info',
+      });
+      openCart();
+    }, '/cart', 'Please sign in to acquire this complete look.');
   };
 
   const totalLookPrice = LOOK_HOTSPOTS.reduce((acc, s) => acc + s.price, 0);

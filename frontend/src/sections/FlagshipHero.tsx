@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowRight, Sparkles, Compass, ShieldCheck, MoveRight } from 'lucide-react';
 import { useAssistant } from '../hooks/useAssistant';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 
 interface HeroSlide {
   id: string;
@@ -55,6 +56,8 @@ const HERO_SLIDES: HeroSlide[] = [
 export const FlagshipHero: React.FC = () => {
   const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
   const { openAssistant } = useAssistant();
+  const { requireAuth } = useRequireAuth();
+  const navigate = useNavigate();
   const slide = HERO_SLIDES[currentSlideIndex];
 
   return (
@@ -134,16 +137,16 @@ export const FlagshipHero: React.FC = () => {
 
           {/* Primary Action Buttons */}
           <div className="flex flex-wrap items-center gap-4 mt-8 pt-2">
-            <Link
-              to={slide.primaryLink}
+            <button
+              onClick={() => requireAuth(() => navigate(slide.primaryLink), slide.primaryLink)}
               className="inline-flex items-center gap-3 px-7 py-3.5 bg-[#F8F6F1] text-[#181916] text-xs uppercase tracking-widest-luxury font-medium hover:bg-[#EFE9DF] transition-all duration-300 shadow-md group"
             >
               <span>{slide.primaryLabel}</span>
               <ArrowRight className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" />
-            </Link>
+            </button>
 
             <button
-              onClick={() => openAssistant()}
+              onClick={() => requireAuth(() => openAssistant(), undefined, 'Please sign in to consult your personal AI stylist.')}
               className="inline-flex items-center gap-2.5 px-6 py-3.5 bg-transparent border border-[#484A42] text-[#F8F6F1] text-xs uppercase tracking-widest-luxury font-medium hover:border-[#D8C6AA] hover:text-[#D8C6AA] transition-all duration-300"
             >
               <Sparkles className="w-3.5 h-3.5 text-[#D8C6AA]" />
@@ -196,12 +199,13 @@ export const FlagshipHero: React.FC = () => {
                     {slide.season}
                   </span>
                 </div>
-                <Link
-                  to="/collections"
+                <button
+                  onClick={() => requireAuth(() => navigate('/collections'), '/collections')}
                   className="w-8 h-8 rounded-full border border-[#484A42] flex items-center justify-center text-[#F8F6F1] hover:border-[#D8C6AA] hover:text-[#D8C6AA] transition-colors"
+                  title="Explore collection"
                 >
                   <MoveRight className="w-3.5 h-3.5" />
-                </Link>
+                </button>
               </div>
             </motion.div>
           </AnimatePresence>
@@ -214,3 +218,4 @@ export const FlagshipHero: React.FC = () => {
     </section>
   );
 };
+

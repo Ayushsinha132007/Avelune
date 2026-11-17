@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Search, ShoppingBag, Heart, User, Menu, X, ArrowRight } from 'lucide-react';
 import { useStore } from '../hooks/useStore';
 import { useAuth } from '../hooks/useAuth';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 import { scrollToSection } from '../utils/scroll';
 
 interface NavbarProps {
@@ -19,6 +20,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
     totalWishlistItems,
   } = useStore();
   const { isAuthenticated, user } = useAuth();
+  const { requireAuth } = useRequireAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -89,7 +91,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
   const handleNavClick = (link: NavItem) => {
     setMobileMenuOpen(false);
     if (link.path) {
-      navigate(link.path);
+      requireAuth(
+        () => navigate(link.path!),
+        link.path,
+        `Please sign in to view the ${link.label} collection.`
+      );
       return;
     }
     if (link.id) {
@@ -205,7 +211,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
             <div className="flex items-center space-x-2 sm:space-x-4">
               {/* Search Button */}
               <button
-                onClick={openSearch}
+                onClick={() =>
+                  requireAuth(openSearch, '/', 'Please sign in to search the atelier collection.')
+                }
                 aria-label="Search collection"
                 className="p-2 text-[#242522] hover:text-[#777B63] transition-colors rounded-full hover:bg-[#EFE9DF]/50"
               >
@@ -230,7 +238,13 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
 
               {/* Wishlist Button */}
               <button
-                onClick={openWishlist}
+                onClick={() =>
+                  requireAuth(
+                    openWishlist,
+                    '/account/wishlist',
+                    'Please sign in to view your saved pieces.'
+                  )
+                }
                 aria-label="View saved pieces"
                 className="relative p-2 text-[#242522] hover:text-[#777B63] transition-colors rounded-full hover:bg-[#EFE9DF]/50"
               >
@@ -244,7 +258,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
 
               {/* Cart Bag Button */}
               <button
-                onClick={openCart}
+                onClick={() =>
+                  requireAuth(openCart, '/cart', 'Please sign in to view your shopping bag.')
+                }
                 aria-label={`Shopping bag containing ${totalCartItems} items`}
                 className="relative p-2 text-[#242522] hover:text-[#777B63] transition-colors rounded-full hover:bg-[#EFE9DF]/50 flex items-center gap-1.5"
               >
@@ -312,7 +328,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
                   <button
                     onClick={() => {
                       setMobileMenuOpen(false);
-                      openSearch();
+                      requireAuth(
+                        openSearch,
+                        '/',
+                        'Please sign in to search the atelier collection.'
+                      );
                     }}
                     className="flex items-center gap-3 text-sm text-[#242522]/80 hover:text-[#242522]"
                   >
@@ -322,7 +342,11 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
                   <button
                     onClick={() => {
                       setMobileMenuOpen(false);
-                      openWishlist();
+                      requireAuth(
+                        openWishlist,
+                        '/account/wishlist',
+                        'Please sign in to view your saved pieces.'
+                      );
                     }}
                     className="flex items-center gap-3 text-sm text-[#242522]/80 hover:text-[#242522]"
                   >

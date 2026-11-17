@@ -173,3 +173,4 @@ export const MaterialitySection: React.FC = () => {
     </section>
   );
 };
+

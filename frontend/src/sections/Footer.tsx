@@ -1,9 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { ArrowUp, Instagram, Twitter, Compass, Globe } from 'lucide-react';
 import { CategoryType } from '../types';
 import { scrollToSection } from '../utils/scroll';
 import { useAuth } from '../hooks/useAuth';
+import { useRequireAuth } from '../hooks/useRequireAuth';
 
 interface FooterProps {
   onSelectCategory?: (cat: CategoryType) => void;
@@ -11,6 +12,13 @@ interface FooterProps {
 
 export const Footer: React.FC<FooterProps> = ({ onSelectCategory }) => {
   const { isAuthenticated } = useAuth();
+  const { requireAuth } = useRequireAuth();
+  const navigate = useNavigate();
+
+  const handleProtectedLink = (path: string, label: string) => {
+    requireAuth(() => navigate(path), path, `Please sign in to explore ${label}.`);
+  };
+
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -71,54 +79,54 @@ export const Footer: React.FC<FooterProps> = ({ onSelectCategory }) => {
             <h4 className="text-xs uppercase tracking-widest-luxury text-[#D8C6AA] font-medium mb-4">
               Collections & Departments
             </h4>
-            <ul className="space-y-2.5 text-xs text-[#F8F6F1]/80 font-light">
+            <ul className="space-y-2.5 text-xs text-[#F8F6F1]/80 font-light flex flex-col items-start">
               <li>
-                <Link
-                  to="/collections/men"
+                <button
+                  onClick={() => handleProtectedLink('/collections/men', "Men's Collection")}
                   className="hover:text-[#D8C6AA] transition-colors text-left"
                 >
                   Men's Collection
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/collections/women"
+                <button
+                  onClick={() => handleProtectedLink('/collections/women', "Women's Atelier")}
                   className="hover:text-[#D8C6AA] transition-colors text-left"
                 >
                   Women's Atelier
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/collections/kids"
+                <button
+                  onClick={() => handleProtectedLink('/collections/kids', "Kids & Juniors")}
                   className="hover:text-[#D8C6AA] transition-colors text-left"
                 >
                   Kids & Juniors
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/offers"
+                <button
+                  onClick={() => handleProtectedLink('/offers', "Offers & Special Picks")}
                   className="hover:text-[#D8C6AA] transition-colors text-left"
                 >
                   Offers & Special Picks
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/collections?collection=under-999"
+                <button
+                  onClick={() => handleProtectedLink('/collections?collection=under-999', "Under ₹999 Edit")}
                   className="hover:text-[#D8C6AA] transition-colors text-left"
                 >
                   Under ₹999 Edit
-                </Link>
+                </button>
               </li>
               <li>
-                <Link
-                  to="/cart"
+                <button
+                  onClick={() => handleProtectedLink('/cart', "Shopping Bag")}
                   className="hover:text-[#D8C6AA] transition-colors text-left"
                 >
                   Shopping Bag
-                </Link>
+                </button>
               </li>
             </ul>
           </div>
