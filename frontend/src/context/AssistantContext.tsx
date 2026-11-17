@@ -63,6 +63,75 @@ const INITIAL_MESSAGES: ChatMessage[] = [
 
 const AssistantContext = createContext<AssistantContextType | undefined>(undefined);
 
+const parseIntentFromText = (text: string, current: ShoppingPreferences): ShoppingPreferences => {
+  const lower = text.toLowerCase();
+  const next: ShoppingPreferences = { ...current };
+
+  // Gender
+  if (/\b(men|man|male|guy|him|ladka|ladke|mard)\b/i.test(lower)) {
+    next.gender = 'men';
+  } else if (/\b(women|woman|female|lady|ladies|her|ladki|aurat)\b/i.test(lower)) {
+    next.gender = 'women';
+  } else if (/\b(kids|kid|child|children|baby|toddler|juniors|bache|bacho)\b/i.test(lower)) {
+    next.gender = 'kids';
+  }
+
+  // Occasion
+  if (/\b(party|partywear|evening|cocktail|nightout|club|gala)\b/i.test(lower)) {
+    next.occasion = 'party';
+  } else if (/\b(office|work|workwear|formal|business|interview|corporate)\b/i.test(lower)) {
+    next.occasion = 'office';
+  } else if (/\b(casual|everyday|daily|summer|regular)\b/i.test(lower)) {
+    next.occasion = 'casual';
+  } else if (/\b(wedding|shaadi|festive|ethnic|traditional|diwali|reception)\b/i.test(lower)) {
+    next.occasion = 'wedding';
+  } else if (/\b(sports|gym|active|workout|running)\b/i.test(lower)) {
+    next.occasion = 'sports / activewear';
+  } else if (/\b(travel|vacation|holiday|trip|resort)\b/i.test(lower)) {
+    next.occasion = 'vacation / travel';
+  }
+
+  // Budget
+  const budgetMatch =
+    lower.match(/(?:under|below|less than|max|budget|within|upto|up to|₹|rs\.?)\s*(\d[\d,]*)/i) ||
+    lower.match(/(\d[\d,]*)\s*(?:rs|rupees|inr|budget|max|tak)/i);
+  if (budgetMatch) {
+    const val = Number(budgetMatch[1].replace(/,/g, ''));
+    if (!isNaN(val) && val > 0) {
+      next.maxBudget = val;
+      next.minBudget = 0;
+    }
+  } else {
+    const standalone = lower.match(/\b(\d{3,6})\b/);
+    if (standalone) {
+      const val = Number(standalone[1].replace(/,/g, ''));
+      if (!isNaN(val) && val > 0) {
+        next.maxBudget = val;
+        next.minBudget = 0;
+      }
+    }
+  }
+
+  // Specific Product Type
+  if (/\b(t-shirts?|tshirts?|tees?|polo)\b/i.test(lower)) {
+    next.preferredCategories = ['T-shirts and Tops'];
+  } else if (/\b(shirts?|button-downs?|overshirts?)\b/i.test(lower)) {
+    next.preferredCategories = ['Shirts'];
+  } else if (/\b(trousers?|pants?|jeans|denim|chinos)\b/i.test(lower)) {
+    next.preferredCategories = ['Trousers and Jeans'];
+  } else if (/\b(jackets?|coats?|blazers?|outerwear|trench|cardigan|sweaters?)\b/i.test(lower)) {
+    next.preferredCategories = ['Jackets and Outerwear'];
+  } else if (/\b(dresses?|gowns?|slips?|kurtas?|skirts?)\b/i.test(lower)) {
+    next.preferredCategories = ['Dresses and Ethnic Wear'];
+  } else if (/\b(shoes?|sneakers?|derby|footwear|loafers?|sandals?|moccasins?)\b/i.test(lower)) {
+    next.preferredCategories = ['Footwear'];
+  } else if (/\b(bags?|totes?|duffels?|backpacks?|handbags?)\b/i.test(lower)) {
+    next.preferredCategories = ['Bags and Accessories'];
+  }
+
+  return next;
+};
+
 export const AssistantProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<ChatMessage[]>(INITIAL_MESSAGES);
@@ -336,37 +405,24 @@ export const AssistantProvider: React.FC<{ children: ReactNode }> = ({ children 
 
   // Handle Free-Form User Text Input
   const handleUserTextMessage = useCallback(
-    (text: string) => {
+    async (text: string) => {
       const trimmed = text.trim();
       if (!trimmed) return;
 
-      // Depending on current step, interpret response or forward
-      if (currentStep === 'occasion') {
-        selectOccasion(trimmed);
-      } else if (currentStep === 'gender') {
-        const lower = trimmed.toLowerCase();
-        if (lower.includes('men') || lower.includes('guy') || lower.includes('him')) {
-          selectGender('men');
-        } else if (lower.includes('women') || lower.includes('lady') || lower.includes('her')) {
-          selectGender('women');
-        } else if (lower.includes('kid') || lower.includes('child') || lower.includes('baby')) {
-          selectGender('kids');
-        } else {
-          selectGender('anyone');
-        }
-      } else if (currentStep === 'budget') {
-        // Parse numbers if present
-        const matches = trimmed.match(/\d[\d,.]*/g);
-        if (matches && matches.length > 0) {
-          const num = Number(matches[matches.length - 1].replace(/,/g, ''));
-          selectBudget(0, num);
-        } else {
-          selectBudget(0, 5000);
-        }
-      } else if (currentStep === 'styles') {
-        selectStyles([trimmed]);
-      } else {
-        // Freeform message after recommendations
+      const lower = trimmed.toLowerCase();
+      const hasGender = /\b(men|man|male|women|woman|female|kids|kid)\b/i.test(lower);
+      const hasBudget = /\b(\d{3,6})\b/.test(lower) || /(?:under|below|max|₹|rs)/i.test(lower);
+      const hasOccasion = /\b(party|office|work|formal|casual|wedding|sports|travel)\b/i.test(lower);
+      const hasProductType = /\b(shirts?|t-shirts?|trousers?|pants?|jeans|jackets?|coats?|dresses?|shoes?|bags?)\b/i.test(lower);
+
+      const isCompositeQuery =
+        (hasGender && (hasBudget || hasOccasion || hasProductType)) ||
+        (hasOccasion && (hasBudget || hasProductType)) ||
+        (hasProductType && (hasBudget || hasGender)) ||
+        currentStep === 'recommendations';
+
+      if (isCompositeQuery) {
+        // Immediate Direct Recommendation
         setMessages((prev) => [
           ...prev,
           {
@@ -377,22 +433,78 @@ export const AssistantProvider: React.FC<{ children: ReactNode }> = ({ children 
           },
         ]);
 
+        const updatedPrefs = parseIntentFromText(trimmed, preferences);
+        setPreferences(updatedPrefs);
         setIsTyping(true);
-        setTimeout(() => {
+
+        try {
+          const results = await productRecommendationService.getRecommendationsAsync(
+            updatedPrefs,
+            { userMessage: trimmed }
+          );
           setIsTyping(false);
+          setRecommendations(results);
+
           setMessages((prev) => [
             ...prev,
             {
-              id: `msg-reply-${Date.now()}`,
+              id: `msg-recs-${Date.now()}`,
               sender: 'assistant',
-              text: `I've noted "${trimmed}". Would you like to refine your budget, change occasion, or explore matching catalogue pieces?`,
+              text: results.summaryCopy || results.message || 'Here are the closest matches based strictly on your request.',
               timestamp: 'Just now',
+              step: 'recommendations',
+              recommendations: results,
             },
           ]);
-        }, 500);
+          setCurrentStep('recommendations');
+        } catch {
+          const fallback = productRecommendationService.getRecommendations(updatedPrefs, {
+            userMessage: trimmed,
+          });
+          setIsTyping(false);
+          setRecommendations(fallback);
+          setMessages((prev) => [
+            ...prev,
+            {
+              id: `msg-recs-${Date.now()}`,
+              sender: 'assistant',
+              text: fallback.summaryCopy,
+              timestamp: 'Just now',
+              step: 'recommendations',
+              recommendations: fallback,
+            },
+          ]);
+          setCurrentStep('recommendations');
+        }
+        return;
+      }
+
+      // Single-step questionnaire progression
+      if (currentStep === 'occasion') {
+        selectOccasion(trimmed);
+      } else if (currentStep === 'gender') {
+        if (lower.includes('men') || lower.includes('guy') || lower.includes('him')) {
+          selectGender('men');
+        } else if (lower.includes('women') || lower.includes('lady') || lower.includes('her')) {
+          selectGender('women');
+        } else if (lower.includes('kid') || lower.includes('child') || lower.includes('baby')) {
+          selectGender('kids');
+        } else {
+          selectGender('anyone');
+        }
+      } else if (currentStep === 'budget') {
+        const matches = trimmed.match(/\d[\d,.]*/g);
+        if (matches && matches.length > 0) {
+          const num = Number(matches[matches.length - 1].replace(/,/g, ''));
+          selectBudget(0, num);
+        } else {
+          selectBudget(0, 5000);
+        }
+      } else if (currentStep === 'styles') {
+        selectStyles([trimmed]);
       }
     },
-    [currentStep, selectOccasion, selectGender, selectBudget, selectStyles]
+    [currentStep, preferences, selectOccasion, selectGender, selectBudget, selectStyles]
   );
 
   return (

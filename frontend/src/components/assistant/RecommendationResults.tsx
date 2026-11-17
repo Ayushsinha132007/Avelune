@@ -116,10 +116,10 @@ export const RecommendationResults: React.FC = () => {
           <div className="flex items-center justify-between border-b border-[#E4DED4] pb-1.5">
             <h4 className="font-serif text-base text-[#242522] flex items-center gap-1.5">
               <Sparkles className="w-3.5 h-3.5 text-[#777B63]" />
-              <span>Best Matches</span>
+              <span>Matching Pieces</span>
             </h4>
             <span className="text-[11px] text-[#777B63]">
-              {bestMatches.length} high-affinity pieces
+              {bestMatches.length} {bestMatches.length === 1 ? 'piece' : 'pieces'} curated
             </span>
           </div>
 

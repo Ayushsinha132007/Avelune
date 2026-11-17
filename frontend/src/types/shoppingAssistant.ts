@@ -61,6 +61,8 @@ export interface CuratedRecommendations {
   completeTheLook?: RecommendationItem[];
   totalFound: number;
   summaryCopy: string;
+  message?: string;
+  summary?: string;
   isRelaxedFilter?: boolean;
 }
 

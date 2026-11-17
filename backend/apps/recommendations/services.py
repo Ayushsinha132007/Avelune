@@ -11,6 +11,7 @@ Core Architectural Principles:
 6. Honest zero-match reporting when no product satisfies all hard constraints.
 """
 
+import re
 from decimal import Decimal
 from typing import Dict, Any, List, Optional, Tuple, Set
 from django.db.models import Q
@@ -148,6 +149,75 @@ STYLE_TAG_MAP: Dict[str, List[str]] = {
 }
 
 
+def parse_user_intent(user_text: str, current_prefs: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    """
+    Strict Natural Language Intent Extractor.
+    Extracts gender, occasion, specific product type, and budget cap directly from text.
+    """
+    current_prefs = current_prefs or {}
+    text = (user_text or '').lower().strip()
+    if not text:
+        return current_prefs
+
+    extracted = dict(current_prefs)
+
+    # 1. Gender extraction
+    if re.search(r'\b(men|man|male|guy|him|ladka|ladke|mard)\b', text):
+        extracted['gender'] = 'men'
+    elif re.search(r'\b(women|woman|female|lady|ladies|her|ladki|aurat)\b', text):
+        extracted['gender'] = 'women'
+    elif re.search(r'\b(kids|kid|child|children|baby|toddler|juniors|bache|bacho)\b', text):
+        extracted['gender'] = 'kids'
+
+    # 2. Occasion extraction
+    if re.search(r'\b(party|partywear|evening|cocktail|nightout|club|gala)\b', text):
+        extracted['occasion'] = 'party'
+    elif re.search(r'\b(office|work|workwear|formal|business|interview|corporate)\b', text):
+        extracted['occasion'] = 'office'
+    elif re.search(r'\b(casual|everyday|daily|summer|regular)\b', text):
+        extracted['occasion'] = 'casual'
+    elif re.search(r'\b(wedding|shaadi|festive|ethnic|traditional|diwali|reception)\b', text):
+        extracted['occasion'] = 'wedding'
+    elif re.search(r'\b(sports|gym|active|workout|running)\b', text):
+        extracted['occasion'] = 'sports / activewear'
+    elif re.search(r'\b(travel|vacation|holiday|trip|resort)\b', text):
+        extracted['occasion'] = 'vacation / travel'
+
+    # 3. Specific Product Type (Hard Constraint - never mix garments)
+    if re.search(r'\b(t-shirts?|tshirts?|tees?|polo)\b', text):
+        extracted['product_type'] = 't-shirt'
+    elif re.search(r'\b(shirts?|button-downs?|overshirts?)\b', text):
+        extracted['product_type'] = 'shirt'
+    elif re.search(r'\b(trousers?|pants?|jeans|denim|chinos)\b', text):
+        extracted['product_type'] = 'trouser'
+    elif re.search(r'\b(jackets?|coats?|blazers?|outerwear|trench|cardigan|sweaters?)\b', text):
+        extracted['product_type'] = 'jacket'
+    elif re.search(r'\b(dresses?|gowns?|slips?|kurtas?|skirts?)\b', text):
+        extracted['product_type'] = 'dress'
+    elif re.search(r'\b(shoes?|sneakers?|derby|footwear|loafers?|sandals?|moccasins?)\b', text):
+        extracted['product_type'] = 'footwear'
+    elif re.search(r'\b(bags?|totes?|duffels?|backpacks?|handbags?|wallets?|cardholders?)\b', text):
+        extracted['product_type'] = 'bag'
+    elif re.search(r'\b(watch|watches|jewellery|jewelry|cuffs?|earrings?|bracelets?|necklaces?|hat|hats|socks)\b', text):
+        extracted['product_type'] = 'accessory'
+
+    # 4. Budget extraction
+    budget_m = re.search(r'(?:under|below|less than|max|budget|within|upto|up to|₹|rs\.?)\s*(\d[\d,]*)', text)
+    if not budget_m:
+        budget_m = re.search(r'(\d[\d,]*)\s*(?:rs|rupees|inr|budget|max|tak)', text)
+    if not budget_m:
+        standalone = re.findall(r'\b(\d{3,6})\b', text)
+        if standalone:
+            extracted['max_budget'] = float(standalone[-1].replace(',', ''))
+    else:
+        try:
+            extracted['max_budget'] = float(budget_m.group(1).replace(',', ''))
+        except ValueError:
+            pass
+
+    return extracted
+
+
 class RecommendationEngine:
     @staticmethod
     def is_eligible(product: Product, prefs: Dict[str, Any]) -> Tuple[bool, Optional[str]]:
@@ -232,16 +302,53 @@ class RecommendationEngine:
             if exclude_accessories and not is_bag_explicitly_requested and not is_accessory_explicitly_requested:
                 return False, "Accessories explicitly excluded"
 
-        # If user explicitly requested clothing/apparel, exclude bags/accessories/footwear
-        if req_product_type in ['clothing', 'apparel', 'outfit']:
+        prod_name_lower = product.name.lower()
+        prod_tags = set(t.lower() for t in (product.tags or []))
+
+        # Strict Garment Category Matching (Hard constraint - NEVER mix product types)
+        if req_product_type in ['shirt', 'shirts', 'button-down']:
+            is_shirt = prod_cat_slug == 'shirts' or ('shirt' in prod_tags and prod_cat_slug not in ['t-shirts-and-tops', 'jackets-and-outerwear', 'trousers-and-jeans'])
+            if not is_shirt:
+                return False, "User specifically requested shirts"
+
+        elif req_product_type in ['t-shirt', 't-shirts', 'tshirt', 'tee', 'tees', 'top', 'tops']:
+            is_tee = prod_cat_slug == 't-shirts-and-tops' or 't-shirt' in prod_tags or 'tee' in prod_tags or 'tank' in prod_tags
+            if not is_tee:
+                return False, "User specifically requested t-shirts/tops"
+
+        elif req_product_type in ['trouser', 'trousers', 'pant', 'pants', 'jeans', 'denim', 'chinos']:
+            is_trouser = prod_cat_slug == 'trousers-and-jeans' or 'trousers' in prod_tags or 'jeans' in prod_tags or 'denim' in prod_tags
+            if not is_trouser:
+                return False, "User specifically requested trousers/pants"
+
+        elif req_product_type in ['jacket', 'jackets', 'coat', 'coats', 'blazer', 'blazers', 'outerwear', 'trench', 'cardigan', 'sweater']:
+            is_outer = prod_cat_slug == 'jackets-and-outerwear' or any(t in prod_tags for t in ['jacket', 'coat', 'blazer', 'overshirt', 'trench', 'cardigan', 'sweater'])
+            if not is_outer:
+                return False, "User specifically requested jackets/outerwear"
+
+        elif req_product_type in ['dress', 'dresses', 'gown', 'slip', 'kurta', 'skirt', 'ethnic']:
+            is_dress = prod_cat_slug == 'dresses-and-ethnic-wear' or any(t in prod_tags for t in ['dress', 'kurta', 'slip', 'skirt'])
+            if not is_dress:
+                return False, "User specifically requested dresses/ethnic wear"
+
+        elif req_product_type in ['footwear', 'shoes', 'sneakers', 'sneaker', 'derby', 'sandals', 'moccasin']:
+            is_shoes = prod_cat_slug == 'footwear' or any(t in prod_tags for t in ['shoes', 'derby', 'sneakers', 'sandals', 'footwear', 'moccasin'])
+            if not is_shoes:
+                return False, "User specifically requested footwear"
+
+        elif req_product_type in ['bag', 'bags', 'duffel', 'tote', 'backpack', 'handbag', 'wallet']:
+            is_bag = prod_cat_slug in ['bags-and-accessories', 'handbags-and-accessories', 'kids-accessories'] and any(t in prod_tags or t in prod_name_lower for t in ['bag', 'duffel', 'tote', 'backpack', 'handbag', 'wallet', 'cardholder'])
+            if not is_bag:
+                return False, "User specifically requested bags"
+
+        elif req_product_type in ['accessory', 'accessories']:
+            is_acc = prod_cat_slug in ACCESSORY_CATEGORY_SLUGS
+            if not is_acc:
+                return False, "User specifically requested accessories"
+
+        elif req_product_type in ['clothing', 'apparel', 'outfit']:
             if prod_cat_slug not in APPAREL_CATEGORY_SLUGS:
                 return False, "Non-clothing category excluded"
-        elif req_product_type in ['bag', 'bags']:
-            if prod_cat_slug not in ['bags-and-accessories', 'handbags-and-accessories', 'kids-accessories']:
-                return False, "Non-bag category excluded"
-        elif req_product_type in ['footwear', 'shoes']:
-            if prod_cat_slug not in FOOTWEAR_CATEGORY_SLUGS:
-                return False, "Non-footwear category excluded"
 
         # Constraint 6: Database Category ID & Category Slug validation
         req_cat_id = prefs.get('category_id')
@@ -331,6 +438,29 @@ class RecommendationEngine:
         styles = [s.strip() for s in (styles or []) if s.strip()]
         preferred_categories = [c.strip() for c in (preferred_categories or []) if c.strip()]
         preferred_colours = [c.strip() for c in (preferred_colours or []) if c.strip()]
+
+        # Step 0: Extract strict intent from user_message if provided
+        if user_message:
+            parsed = parse_user_intent(user_message, {
+                'gender': gender,
+                'occasion': occasion,
+                'max_budget': max_budget,
+                'min_budget': min_budget,
+                'product_type': product_type,
+            })
+            if parsed.get('gender') and parsed['gender'] != 'anyone':
+                gender = parsed['gender']
+            elif parsed.get('gender') and (gender == 'anyone' or not gender):
+                gender = parsed['gender']
+
+            if parsed.get('occasion'):
+                occasion = parsed['occasion']
+
+            if parsed.get('max_budget') is not None:
+                max_budget = parsed['max_budget']
+
+            if parsed.get('product_type'):
+                product_type = parsed['product_type']
 
         effective_max = max_budget if max_budget is not None and max_budget > 0 else None
         effective_min = min_budget if min_budget is not None and min_budget > 0 else None
@@ -489,9 +619,8 @@ class RecommendationEngine:
         # Sort strictly by score descending, then rating descending, then price ascending
         scored_products.sort(key=lambda x: (x['score'], x['product'].rating, -x['product'].price), reverse=True)
 
-        # Step 5: Format Standard Response Packages
-        best_matches_raw = scored_products[:4]
-        within_budget_raw = scored_products[4:8]
+        # Step 5: Format Standard Response Packages (Strictly only requested matches)
+        best_matches_raw = scored_products[:6]
 
         def format_product_cards(items_list):
             out = []
@@ -506,7 +635,7 @@ class RecommendationEngine:
             return out
 
         best_matches = format_product_cards(best_matches_raw)
-        within_budget = format_product_cards(within_budget_raw)
+        within_budget = []  # Strictly keep empty to prevent extraneous unsolicited suggestions
 
         # Formulate structured products list per Section 12 specification
         structured_products = [
@@ -519,11 +648,19 @@ class RecommendationEngine:
         ]
 
         gender_display = req_g.capitalize() if req_g in ['men', 'women', 'kids'] else 'Curated'
-        occ_display = occasion.capitalize() if occasion else 'Wardrobe'
-        budget_display = f" under ₹{int(effective_max):,}" if effective_max else ""
-        summary_title = f"{gender_display} {occ_display}{budget_display}"
+        occ_display = occasion.capitalize() if occasion else ''
+        type_display = f"{product_type.capitalize()}s" if product_type else "Pieces"
+        budget_display = f"under ₹{int(effective_max):,}" if effective_max else ""
+        parts = [gender_display]
+        if occ_display:
+            parts.append(occ_display)
+        parts.append(type_display)
+        if budget_display:
+            parts.append(budget_display)
+        summary_title = " ".join(parts)
 
-        summary_msg = f"I found {len(best_matches_raw)} {gender_display.lower()} {occ_display.lower()} options{budget_display}. Here are the closest matches."
+        item_noun = f"{product_type}s" if product_type else (f"{occ_display.lower()} options" if occ_display else "pieces")
+        summary_msg = f"I found {len(best_matches_raw)} {gender_display.lower()} {item_noun} {budget_display}.".strip().replace("  ", " ") + " Here are the closest matches."
 
         return {
             'summary': summary_title,

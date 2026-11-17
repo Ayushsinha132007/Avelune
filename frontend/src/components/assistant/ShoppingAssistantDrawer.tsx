@@ -130,13 +130,7 @@ export const ShoppingAssistantDrawer: React.FC = () => {
               <form onSubmit={handleSubmit} className="flex items-center gap-2">
                 <input
                   type="text"
-                  placeholder={
-                    currentStep === 'occasion'
-                      ? 'Type an occasion, e.g. "Cocktail party"...'
-                      : currentStep === 'budget'
-                      ? 'Type your max budget, e.g. "4500"...'
-                      : 'Ask a question or describe what you love...'
-                  }
+                  placeholder="e.g. 'Men, Party, ₹2,000' or 'Party shirts under 2000'..."
                   value={inputText}
                   onChange={(e) => setInputText(e.target.value)}
                   className="flex-1 bg-[#F8F6F1] border border-[#E4DED4] px-3.5 py-2.5 text-xs sm:text-sm text-[#242522] placeholder-[#A8A69E] focus:outline-none focus:border-[#242522] rounded-none"

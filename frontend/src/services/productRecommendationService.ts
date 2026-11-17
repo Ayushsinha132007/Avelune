@@ -44,9 +44,25 @@ export const productRecommendationService = {
     const isBagRequested = ['bag', 'bags', 'duffel', 'tote', 'handbag', 'wallet'].some((w) => userMsg.includes(w));
     const isAccessoryRequested = isBagRequested || ['accessory', 'accessories', 'watch', 'jewellery'].some((w) => userMsg.includes(w));
 
+    const prefCat = (preferences.preferredCategories && preferences.preferredCategories[0]) || '';
+    const reqShirt = prefCat === 'Shirts' || /\b(shirts?|button-downs?)\b/i.test(userMsg);
+    const reqTee = prefCat === 'T-shirts and Tops' || /\b(t-shirts?|tshirts?|tees?)\b/i.test(userMsg);
+    const reqTrouser = prefCat === 'Trousers and Jeans' || /\b(trousers?|pants?|jeans|denim)\b/i.test(userMsg);
+    const reqJacket = prefCat === 'Jackets and Outerwear' || /\b(jackets?|coats?|blazers?|outerwear)\b/i.test(userMsg);
+    const reqDress = prefCat === 'Dresses and Ethnic Wear' || /\b(dresses?|gowns?|kurtas?|slips?)\b/i.test(userMsg);
+    const reqFootwear = prefCat === 'Footwear' || /\b(shoes?|sneakers?|derby|footwear)\b/i.test(userMsg);
+
     // 1. Strict Hard Filtering
     const eligibleProducts = MOCK_PRODUCTS.filter((product) => {
       if (!product.inStock) return false;
+
+      // Strict Product Type isolation (NEVER mix product types)
+      if (reqShirt && product.category !== 'Shirts') return false;
+      if (reqTee && product.category !== 'T-shirts and Tops') return false;
+      if (reqTrouser && product.category !== 'Trousers and Jeans') return false;
+      if (reqJacket && product.category !== 'Jackets and Outerwear') return false;
+      if (reqDress && product.category !== 'Dresses and Ethnic Wear') return false;
+      if (reqFootwear && product.category !== 'Footwear') return false;
 
       // Strict Gender / Target Audience Filter
       const prodGender = product.gender.toLowerCase();
@@ -132,11 +148,12 @@ export const productRecommendationService = {
 
     scored.sort((a, b) => b.score - a.score);
 
-    const bestMatches = scored.slice(0, 4);
-    const withinBudget = scored.slice(4, 8);
+    const bestMatches = scored.slice(0, 6);
+    const withinBudget: typeof bestMatches = [];
 
     const genderDisplay = reqGender === 'men' ? "men's" : reqGender === 'women' ? "women's" : "curated";
-    const summaryCopy = `I found ${bestMatches.length} ${genderDisplay} ${occasion || 'apparel'} options under ₹${maxBudget.toLocaleString('en-IN')}. Here are the closest matches.`;
+    const itemNoun = reqShirt ? 'shirts' : reqTrouser ? 'trousers' : reqJacket ? 'jackets' : reqTee ? 't-shirts' : (occasion ? `${occasion} options` : 'options');
+    const summaryCopy = `I found ${bestMatches.length} ${genderDisplay} ${itemNoun} under ₹${maxBudget.toLocaleString('en-IN')}. Here are the closest matches.`;
 
     return {
       bestMatches,

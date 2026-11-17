@@ -125,3 +125,47 @@ class RecommendationTests(TestCase):
             )
             self.assertEqual(results['ai_status'], 'awaiting_credentials')
             self.assertIn('awaiting GEMINI_API_KEY', results['diagnostic'])
+
+    def test_strict_intent_garment_filtering(self):
+        # Adding a trouser product
+        cat_trousers = Category.objects.create(
+            slug='trousers-and-jeans',
+            name='Trousers and Jeans',
+            target_audience='men',
+            display_order=3
+        )
+        Product.objects.create(
+            id='test-trouser-004',
+            name='Tailored Evening Trousers',
+            slug='tailored-evening-trousers',
+            category=cat_trousers,
+            gender='men',
+            price=Decimal('2500.00'),
+            description='Tailored trousers for evening wear.',
+            tags=['trousers', 'party', 'formal'],
+            in_stock=True,
+            stock_quantity=5,
+        )
+
+        # When asking specifically for shirts, trousers must NEVER appear
+        res_shirt = RecommendationEngine.recommend(
+            user_message='men party shirts under 3000'
+        )
+        returned_ids = [it['product']['id'] for it in res_shirt['bestMatches']]
+        self.assertNotIn('test-trouser-004', returned_ids)
+
+        # When asking specifically for trousers, shirts must NEVER appear
+        res_trouser = RecommendationEngine.recommend(
+            user_message='men party trousers under 3000'
+        )
+        returned_ids_tr = [it['product']['id'] for it in res_trouser['bestMatches']]
+        self.assertIn('test-trouser-004', returned_ids_tr)
+        self.assertNotIn('test-shirt-001', returned_ids_tr)
+
+    def test_unsolicited_accessories_strictly_excluded(self):
+        # When asking for clothing, bags and accessories must NEVER be returned
+        res = RecommendationEngine.recommend(
+            user_message='Men, Vacation, ₹15,000'
+        )
+        returned_ids = [it['product']['id'] for it in res['bestMatches']]
+        self.assertNotIn('test-bag-003', returned_ids)
