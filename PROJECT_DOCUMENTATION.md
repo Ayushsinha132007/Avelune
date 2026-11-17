@@ -399,3 +399,4 @@ Open **`http://localhost:5173`** in your browser.
 
 ### Q4: How does the AI recommendation engine avoid hallucinating non-existent products?
 > **Answer**: It follows a **database-first candidate extraction pipeline**. Real SQLite products are first filtered through a strict eligibility gatekeeper (`is_eligible`). Only verified database product IDs are presented to the AI. A post-validation boundary ensures that if the LLM mentions an unrecognized product ID or a product outside the budget, it is discarded immediately.
+

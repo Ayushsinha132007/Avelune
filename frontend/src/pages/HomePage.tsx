@@ -1,16 +1,14 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import { HeroSection } from '../sections/HeroSection';
-import { CategoryCarousel } from '../components/catalog/CategoryCarousel';
-import { NewArrivalsSection } from '../sections/NewArrivalsSection';
-import { FeaturedCollection } from '../sections/FeaturedCollection';
+import { FlagshipHero } from '../sections/FlagshipHero';
+import { MaisonPortals } from '../sections/MaisonPortals';
+import { ShopTheLookSection } from '../sections/ShopTheLookSection';
+import { AiStylistSalon } from '../sections/AiStylistSalon';
+import { CuratedArchiveShowcase } from '../sections/CuratedArchiveShowcase';
+import { MaterialitySection } from '../sections/MaterialitySection';
 import { BrandStorySection } from '../sections/BrandStorySection';
-import { LookbookSection } from '../sections/LookbookSection';
-import { BrandValuesSection } from '../sections/BrandValuesSection';
+import { AtelierServicesSection } from '../sections/AtelierServicesSection';
 import { NewsletterSection } from '../sections/NewsletterSection';
-import { StyleQuizBanner } from '../sections/StyleQuizBanner';
-import { CategoryType, CarouselCategoryItem } from '../types';
-import { scrollToSection } from '../utils/scroll';
+import { CategoryType } from '../types';
 
 interface HomePageProps {
   selectedCategory: string | null;
@@ -18,61 +16,35 @@ interface HomePageProps {
   onClearCategory: () => void;
 }
 
-export const HomePage: React.FC<HomePageProps> = ({
-  selectedCategory,
-  onSelectCategory,
-  onClearCategory,
-}) => {
-  const navigate = useNavigate();
-
-  const handleViewAllNewArrivals = () => {
-    onClearCategory();
-    scrollToSection('featured-collection');
-  };
-
-  const handleCarouselSelect = (item: CarouselCategoryItem) => {
-    if (item.gender) {
-      navigate(`/collections/${item.gender}`);
-    } else if (item.collection) {
-      navigate(`/collections?collection=${item.collection}`);
-    } else {
-      scrollToSection('featured-collection');
-    }
-  };
-
+export const HomePage: React.FC<HomePageProps> = () => {
   return (
-    <div className="w-full">
-      {/* 1. Cinematic Hero */}
-      <HeroSection />
+    <div className="w-full bg-[#F8F6F1]">
+      {/* 1. Cinematic Flagship Hero with Interactive Mood Switcher */}
+      <FlagshipHero />
 
-      {/* 2. Category Carousel ("Discover Your Style") */}
-      <CategoryCarousel onSelectItem={handleCarouselSelect} />
+      {/* 2. The Maison Portals: Dedicated Department Universes (Homme, Femme, Vault, Enfant) */}
+      <MaisonPortals />
 
-      {/* 3. Dedicated New Arrivals Spotlight ("Atelier Drop 01") */}
-      <NewArrivalsSection onViewAllNewArrivals={handleViewAllNewArrivals} />
+      {/* 3. Interactive "Shop The Look" Editorial Canvas with Clickable Hotspot Pins */}
+      <ShopTheLookSection />
 
-      {/* 4. Complete Shop / Featured Collection ("Pieces Worth Keeping") */}
-      <FeaturedCollection
-        selectedCategory={selectedCategory}
-        onClearCategory={onClearCategory}
-        onSelectCategory={onSelectCategory}
-      />
+      {/* 4. L'Atelier Styliste: Interactive AI Style Concierge Consultation Salon */}
+      <AiStylistSalon />
 
-      {/* 5. Discover Your Style Interactive Stylist Banner ("Your Style, Thoughtfully Curated") */}
-      <StyleQuizBanner />
+      {/* 5. Curator's Exhibition: 4 Selected Masterpieces + Link to Complete Catalogue Dashboard */}
+      <CuratedArchiveShowcase />
 
-      {/* 6. Brand Story Editorial Banner ("Less, but better.") */}
+      {/* 6. Honest Materiality: Interactive Fabric Provenance Archives */}
+      <MaterialitySection />
+
+      {/* 7. Brand Story & Quiet Luxury Manifesto ("Less, but better.") */}
       <BrandStorySection />
 
-      {/* 7. Magazine Editorial Lookbook */}
-      <LookbookSection />
+      {/* 8. The Atelier Experience & Critical Press Praise (Vogue, GQ, AD) */}
+      <AtelierServicesSection />
 
-      {/* 8. Brand Values */}
-      <BrandValuesSection />
-
-      {/* 9. Newsletter Signup */}
+      {/* 9. VIP Private Salon Invitation */}
       <NewsletterSection />
     </div>
   );
 };
-
