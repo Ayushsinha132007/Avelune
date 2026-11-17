@@ -6,6 +6,7 @@ import { useStore } from '../hooks/useStore';
 import { useAuth } from '../hooks/useAuth';
 import { useRequireAuth } from '../hooks/useRequireAuth';
 import { scrollToSection } from '../utils/scroll';
+import { ADMIN_DESIGNATED_EMAIL } from '../services/adminService';
 
 interface NavbarProps {
   onNavigateSection?: (sectionId: string) => void;
@@ -209,6 +210,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
 
             {/* Right: Utility Icons */}
             <div className="flex items-center space-x-2 sm:space-x-4">
+              {/* Exclusive Atelier Director Admin Suite Link */}
+              {isAuthenticated &&
+                (user?.email?.trim().toLowerCase() === ADMIN_DESIGNATED_EMAIL.toLowerCase() ||
+                  Boolean((user as any)?.isAdmin)) && (
+                  <Link
+                    to="/admin"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono font-semibold uppercase tracking-wider bg-[#242522] text-[#D8C6AA] hover:bg-[#3A3B37] border border-[#D8C6AA]/40 shadow-xs transition-colors rounded-none"
+                    title="Open Atelier Director Suite"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                    Admin Suite
+                  </Link>
+                )}
+
               {/* Search Button */}
               <button
                 onClick={() =>
@@ -353,6 +368,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
                     <Heart className="w-4 h-4 text-[#777B63]" />
                     <span>Saved Pieces ({totalWishlistItems})</span>
                   </button>
+
+                  {isAuthenticated &&
+                    (user?.email?.trim().toLowerCase() === ADMIN_DESIGNATED_EMAIL.toLowerCase() ||
+                      Boolean((user as any)?.isAdmin)) && (
+                      <Link
+                        to="/admin"
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="flex items-center gap-3 text-sm text-[#D8C6AA] bg-[#242522] p-2.5 rounded-xs font-mono font-medium"
+                      >
+                        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                        <span>Executive Admin Suite</span>
+                      </Link>
+                    )}
 
                   <Link
                     to={isAuthenticated ? "/account/home" : "/login"}

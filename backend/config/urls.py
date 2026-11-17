@@ -40,6 +40,7 @@ urlpatterns = [
     path('health/', health_check, name='health-check'),
     path('api/', api_root, name='api-root'),
     path('api/auth/', include('apps.accounts.urls')),
+    path('api/admin-suite/', include('apps.accounts.admin_urls')),
     path('api/products/', include('apps.catalog.urls')),
     path('api/categories/', CategoryListView.as_view(), name='api-categories'),
     path('api/collections/<str:collection_type>/', FeaturedCollectionQuickView.as_view(), name='api-collections'),

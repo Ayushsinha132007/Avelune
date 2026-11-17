@@ -66,6 +66,8 @@ export interface Product {
   reviewCount: number;
   badge?: ProductBadge;
   images: string[];
+  primaryImage?: string;
+  stockQuantity?: number;
   description: string;
   details: string[];
   materials: string;

@@ -34,6 +34,8 @@ export const authService = {
     message: string;
     expiresIn?: number;
     devOtp?: string;
+    isAdmin?: boolean;
+    bypassOtp?: boolean;
     error?: string;
   }> {
     if (!email || !email.includes('@')) {
@@ -49,8 +51,10 @@ export const authService = {
         success: boolean;
         message: string;
         email: string;
-        expiresIn: number;
+        expiresIn?: number;
         devOtp?: string;
+        isAdmin?: boolean;
+        bypassOtp?: boolean;
         error?: string;
       }>('/auth/send-otp/', {
         method: 'POST',
@@ -62,6 +66,8 @@ export const authService = {
         message: data.message || `Verification code sent to ${email}.`,
         expiresIn: data.expiresIn || 600,
         devOtp: data.devOtp,
+        isAdmin: data.isAdmin,
+        bypassOtp: data.bypassOtp,
       };
     } catch (err: any) {
       return {

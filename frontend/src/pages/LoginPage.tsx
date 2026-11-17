@@ -13,11 +13,12 @@ import { OtpInput } from '../components/auth/OtpInput';
 import { useAuth } from '../hooks/useAuth';
 import { useStore } from '../hooks/useStore';
 import { authService } from '../services/authService';
+import { ADMIN_DESIGNATED_EMAIL } from '../services/adminService';
 
 export const LoginPage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { login, sendOtp, verifyOtp, loginWithGoogle } = useAuth();
+  const { login, sendOtp, verifyOtp, loginWithGoogle, adminLogin } = useAuth();
   const { showToast } = useStore();
 
   // Mode: 'otp' (Industry Standard Email OTP) or 'password'
@@ -73,9 +74,52 @@ export const LoginPage: React.FC = () => {
 
     if (!validateEmail()) return;
 
+    // Designated Atelier Administrator: Instant Zero-OTP Direct Entry
+    if (email.trim().toLowerCase() === ADMIN_DESIGNATED_EMAIL.toLowerCase()) {
+      setIsLoading(true);
+      try {
+        const adminRes = await adminLogin(ADMIN_DESIGNATED_EMAIL);
+        if (adminRes.success) {
+          showToast({
+            title: 'Welcome Atelier Director',
+            description: 'Direct authentication verified. Entering Admin Suite.',
+            type: 'info',
+          });
+          navigate('/admin', { replace: true });
+          return;
+        } else {
+          setFeedback({
+            type: 'error',
+            message: adminRes.error || 'Administrator login failed.',
+          });
+        }
+      } catch (err: any) {
+        setFeedback({
+          type: 'error',
+          message: err.message || 'Direct admin login error.',
+        });
+      } finally {
+        setIsLoading(false);
+      }
+      return;
+    }
+
     setIsLoading(true);
     try {
       const res = await sendOtp(email.trim());
+      if (res.isAdmin || res.bypassOtp) {
+        const adminRes = await adminLogin(email.trim());
+        if (adminRes.success) {
+          showToast({
+            title: 'Welcome Atelier Director',
+            description: 'Direct authentication verified. Entering Admin Suite.',
+            type: 'info',
+          });
+          navigate('/admin', { replace: true });
+          return;
+        }
+      }
+
       if (res.success) {
         setOtpStep('verify');
         setResendCooldown(45);
@@ -186,6 +230,28 @@ export const LoginPage: React.FC = () => {
     if (!validateEmail()) return;
     if (!password) {
       setErrors((prev) => ({ ...prev, password: 'Password is required.' }));
+      return;
+    }
+
+    // Designated Atelier Administrator: Instant Zero-OTP Direct Entry
+    if (email.trim().toLowerCase() === ADMIN_DESIGNATED_EMAIL.toLowerCase()) {
+      setIsLoading(true);
+      try {
+        const adminRes = await adminLogin(ADMIN_DESIGNATED_EMAIL);
+        if (adminRes.success) {
+          showToast({
+            title: 'Welcome Atelier Director',
+            description: 'Direct authentication verified. Entering Admin Suite.',
+            type: 'info',
+          });
+          navigate('/admin', { replace: true });
+          return;
+        }
+      } catch (err: any) {
+        setFeedback({ type: 'error', message: err.message || 'Direct admin login error.' });
+      } finally {
+        setIsLoading(false);
+      }
       return;
     }
 
@@ -318,6 +384,52 @@ export const LoginPage: React.FC = () => {
               disabled={isLoading}
             />
 
+            {/* Atelier Director Instant Access Indicator */}
+            {email.trim().toLowerCase() === ADMIN_DESIGNATED_EMAIL.toLowerCase() && (
+              <div className="p-3.5 bg-[#1E1F1C] border border-[#D8C6AA] text-[#F8F6F1] shadow-md space-y-2">
+                <div className="flex items-center justify-between">
+                  <span className="text-[10px] font-mono uppercase tracking-widest text-[#D8C6AA] flex items-center gap-1.5 font-bold">
+                    <Sparkles className="w-3.5 h-3.5 text-[#D8C6AA]" />
+                    Atelier Director Recognized
+                  </span>
+                  <span className="text-[9px] px-1.5 py-0.5 bg-[#D8C6AA] text-[#1E1F1C] font-mono font-bold uppercase">
+                    Zero OTP Required
+                  </span>
+                </div>
+                <p className="text-[11px] text-[#C4C0B6] leading-relaxed">
+                  Authorized Administrator address ({ADMIN_DESIGNATED_EMAIL}) identified. Instant authentication is available with zero code delivery.
+                </p>
+                <button
+                  type="button"
+                  onClick={async () => {
+                    setIsLoading(true);
+                    try {
+                      const res = await adminLogin(ADMIN_DESIGNATED_EMAIL);
+                      if (res.success) {
+                        showToast({
+                          title: 'Welcome Atelier Director',
+                          description: 'Direct authentication verified. Entering Admin Suite.',
+                          type: 'info',
+                        });
+                        navigate('/admin', { replace: true });
+                      } else {
+                        setFeedback({ type: 'error', message: res.error || 'Admin login failed.' });
+                      }
+                    } catch (err: any) {
+                      setFeedback({ type: 'error', message: err.message || 'Direct login failed.' });
+                    } finally {
+                      setIsLoading(false);
+                    }
+                  }}
+                  disabled={isLoading}
+                  className="w-full py-2.5 bg-[#D8C6AA] hover:bg-[#EADBC4] text-[#1E1F1C] text-xs font-bold uppercase tracking-widest transition-colors flex items-center justify-center gap-2 cursor-pointer shadow-xs"
+                >
+                  <ArrowRight className="w-4 h-4" />
+                  Enter Atelier Admin Suite
+                </button>
+              </div>
+            )}
+
             <button
               type="submit"
               disabled={isLoading}
@@ -326,11 +438,19 @@ export const LoginPage: React.FC = () => {
               {isLoading ? (
                 <>
                   <Loader2 className="w-4 h-4 animate-spin text-[#D8C6AA]" />
-                  <span>Sending Verification Code...</span>
+                  <span>
+                    {email.trim().toLowerCase() === ADMIN_DESIGNATED_EMAIL.toLowerCase()
+                      ? 'Authenticating Director...'
+                      : 'Sending Verification Code...'}
+                  </span>
                 </>
               ) : (
                 <>
-                  <span>Continue with Email OTP</span>
+                  <span>
+                    {email.trim().toLowerCase() === ADMIN_DESIGNATED_EMAIL.toLowerCase()
+                      ? 'Enter Admin Suite (Instant • No OTP)'
+                      : 'Continue with Email OTP'}
+                  </span>
                   <ArrowRight className="w-4 h-4 text-[#D8C6AA] group-hover:translate-x-1 transition-transform" />
                 </>
               )}

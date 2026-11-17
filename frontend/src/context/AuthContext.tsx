@@ -1,16 +1,19 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode, useCallback } from 'react';
 import { DemoUser } from '../types/auth';
 import { authService, SignupCredentials } from '../services/authService';
+import { adminService, ADMIN_DESIGNATED_EMAIL } from '../services/adminService';
 import { getAuthToken, setAuthToken } from '../services/api';
 
 interface AuthContextType {
   user: DemoUser | null;
   isAuthenticated: boolean;
+  isAdmin: boolean;
   isLoading: boolean;
   login: (email: string, password: string) => Promise<{ success: boolean; user?: DemoUser; error?: string }>;
   signup: (data: SignupCredentials) => Promise<{ success: boolean; user?: DemoUser; error?: string }>;
-  sendOtp: (email: string, purpose?: string) => Promise<{ success: boolean; message: string; expiresIn?: number; devOtp?: string; error?: string }>;
+  sendOtp: (email: string, purpose?: string) => Promise<{ success: boolean; message: string; expiresIn?: number; devOtp?: string; error?: string; isAdmin?: boolean; bypassOtp?: boolean }>;
   verifyOtp: (email: string, otp: string, fullName?: string) => Promise<{ success: boolean; user?: DemoUser; error?: string; isNewUser?: boolean }>;
+  adminLogin: (email?: string) => Promise<{ success: boolean; user?: DemoUser; error?: string }>;
   loginWithGoogle: (payload?: { credential?: string; email?: string; fullName?: string }) => Promise<{ success: boolean; user?: DemoUser; error?: string }>;
   logout: () => void;
   updateProfile: (updates: Partial<DemoUser>) => void;
@@ -91,6 +94,16 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     return { success: false, error: res.error || 'Registration failed' };
   }, []);
 
+  const adminLogin = useCallback(async (email: string = ADMIN_DESIGNATED_EMAIL) => {
+    const res = await adminService.directLogin(email);
+    if (res.success && res.user) {
+      setUser(res.user);
+      localStorage.setItem(LOCAL_USER_BACKUP_KEY, JSON.stringify(res.user));
+      return { success: true, user: res.user };
+    }
+    return { success: false, error: res.error || 'Admin authentication failed.' };
+  }, []);
+
   const loginWithGoogle = useCallback(async (payload?: { credential?: string; email?: string; fullName?: string }) => {
     const res = await authService.loginWithGoogle(payload || {});
     if (res.success && res.user) {
@@ -127,14 +140,20 @@ export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     });
   }, []);
 
+  const isAdmin = Boolean(
+    user && (user.email?.trim().toLowerCase() === ADMIN_DESIGNATED_EMAIL.toLowerCase() || (user as any).isAdmin)
+  );
+
   return (
     <AuthContext.Provider
       value={{
         user,
         isAuthenticated: Boolean(user),
+        isAdmin,
         isLoading,
         sendOtp,
         verifyOtp,
+        adminLogin,
         login,
         signup,
         loginWithGoogle,

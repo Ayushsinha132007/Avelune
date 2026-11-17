@@ -26,6 +26,10 @@ import { OrdersPage } from './pages/account/OrdersPage';
 import { WishlistPage } from './pages/account/WishlistPage';
 import { ProfilePage } from './pages/account/ProfilePage';
 
+// Admin Executive Suite
+import { AdminProtectedRoute } from './components/admin/AdminProtectedRoute';
+import { AdminDashboardPage } from './pages/admin/AdminDashboardPage';
+
 import { CategoryType } from './types';
 import { scrollToSection } from './utils/scroll';
 
@@ -212,6 +216,17 @@ export const AppContent: React.FC = () => {
 
       {/* Account Root Redirect */}
       <Route path="/account" element={<Navigate to="/account/home" replace />} />
+
+      {/* Atelier Director Suite (Strictly restricted to ayushsinha53467@gmail.com) */}
+      <Route
+        path="/admin"
+        element={
+          <AdminProtectedRoute>
+            <AdminDashboardPage />
+          </AdminProtectedRoute>
+        }
+      />
+      <Route path="/admin/*" element={<Navigate to="/admin" replace />} />
 
       {/* Fallback Route */}
       <Route
