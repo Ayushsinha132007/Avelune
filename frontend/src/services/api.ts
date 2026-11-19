@@ -2,8 +2,18 @@ import { Product, ProductFilterState } from '../types';
 import { MOCK_PRODUCTS } from '../data/products';
 import { filterAndSortProducts } from '../utils/filterProducts';
 
-export const API_BASE_URL =
-  (import.meta as any).env?.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api';
+function resolveApiBaseUrl(): string {
+  let envUrl = ((import.meta as any).env?.VITE_API_BASE_URL || 'http://127.0.0.1:8000/api').trim();
+  while (envUrl.endsWith('/')) {
+    envUrl = envUrl.slice(0, -1);
+  }
+  if (!envUrl.endsWith('/api')) {
+    envUrl = `${envUrl}/api`;
+  }
+  return envUrl;
+}
+
+export const API_BASE_URL = resolveApiBaseUrl();
 
 const AUTH_TOKEN_KEY = 'avelune_auth_token_v1';
 
