@@ -37,3 +37,4 @@ urlpatterns = [
     path('products/<str:product_id>/', AdminProductDetailManageView.as_view(), name='admin-product-detail-manage'),
     path('products/<str:product_id>', AdminProductDetailManageView.as_view(), name='admin-product-detail-manage-noslash'),
 ]
+

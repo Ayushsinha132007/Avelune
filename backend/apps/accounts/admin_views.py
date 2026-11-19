@@ -596,3 +596,4 @@ class AdminProductDetailManageView(APIView):
             'success': True,
             'message': f"Product '{prod_name}' ({product_id}) removed from active catalogue.",
         }, status=status.HTTP_200_OK)
+

@@ -148,3 +148,4 @@ export interface AdminProductPayload {
   badge?: string;
   isActive?: boolean;
 }
+

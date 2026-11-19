@@ -180,3 +180,4 @@ class AdminSuiteTests(TestCase):
         self.assertEqual(del_res.status_code, status.HTTP_200_OK)
         new_prod.refresh_from_db()
         self.assertFalse(new_prod.is_active)
+

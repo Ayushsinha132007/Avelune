@@ -505,3 +505,4 @@ export const UserDossierModal: React.FC<UserDossierModalProps> = ({
     </div>
   );
 };
+
